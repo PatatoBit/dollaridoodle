@@ -3,7 +3,7 @@
 	let canvas: HTMLCanvasElement;
 	let ctx: CanvasRenderingContext2D;
 	let scale = 1;
-	let zoomSpeed = 0.2;
+	let zoomSpeed = 0.05;
 	let isDragging = false;
 	let startX: number;
 	let startY: number;
@@ -29,7 +29,7 @@
 	}
 
 	function handleWheel(event: WheelEvent) {
-		const zoom = event.deltaY > 0 ? 0.9 : 1.1;
+		const zoom = event.deltaY > 0 ? 1 - zoomSpeed : 1 + zoomSpeed;
 		scale *= zoom;
 		canvas.setAttribute('style', `transform: scale(${scale})`);
 		offsetX -= (event.clientX - offsetX) * (zoom - 1);
