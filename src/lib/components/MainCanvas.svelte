@@ -51,25 +51,10 @@
 			}
 		);
 	}
-
-	function testScale() {
-		canvas.animate(
-			[
-				{
-					transform: `scale(${scale * 2})`
-				}
-			],
-			{
-				duration: 100,
-				easing: 'ease-in-out',
-				fill: 'forwards'
-			}
-		);
-	}
 </script>
 
 <div class="container">
-	<div class="canvas-container" on:wheel={handleWheel} on:click={testScale}>
+	<div class="canvas-container" on:wheel={handleWheel}>
 		<canvas bind:this={canvas}></canvas>
 	</div>
 </div>
