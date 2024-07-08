@@ -38,18 +38,11 @@
 	}
 </script>
 
-<div class="canvas-container">
-	<canvas id="c"></canvas>
-</div>
-<button on:click={toggleDrawingMode}>{canvas?.isDrawingMode}</button>
+<canvas id="c"></canvas>
 
 <style lang="scss">
-	.canvas-container {
-		border: 1px dashed black;
-		aspect-ratio: 3/2;
-	}
-
 	canvas {
+		width: 100%;
 		height: auto;
 	}
 </style>
