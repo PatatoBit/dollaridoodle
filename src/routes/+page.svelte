@@ -4,15 +4,15 @@
 
 <main>
 	<div class="main-container">
-		<h1 class="main-title">DollariDoodle</h1>
+		<h1 class="main-title mono">DollariDoodle</h1>
 
 		<div class="canvas-container">
 			<MainCanvas />
 		</div>
 
 		<div class="details">
-			<p>412 requests have been completed</p>
-			<p>1,012 requests in queue...</p>
+			<p><strong>412</strong> requests have been completed</p>
+			<p><strong>1,012</strong> requests in queue</p>
 		</div>
 
 		<div class="input-bar">
