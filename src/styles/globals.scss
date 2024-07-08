@@ -17,6 +17,9 @@ body {
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
+
+	background-color: $white;
+	color: $black;
 }
 
 .mono {
@@ -24,9 +27,10 @@ body {
 }
 
 input {
+	font-family: 'Inter', sans-serif;
 	display: block;
 	width: 100%;
-	padding: 1rem;
+	padding: 0.7rem 1rem;
 	font-size: 1rem;
 	line-height: 1.5;
 	border: 1px solid #ccc;
@@ -34,6 +38,7 @@ input {
 }
 
 button {
+	font-family: 'Roboto Mono', sans-serif;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -45,8 +50,8 @@ button {
 	background-color: $primary;
 
 	img {
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 	}
 
 	&:active {
@@ -57,4 +62,6 @@ button {
 	aspect-ratio: 1/1;
 	width: 60px;
 	height: 60px;
+
+	padding: 0.5rem;
 }

@@ -28,6 +28,8 @@
 	.canvas-container {
 		position: relative;
 		overflow: hidden;
+
+		width: 100%;
 	}
 
 	main {
@@ -59,5 +61,9 @@
 		display: flex;
 		flex-direction: row;
 		gap: 1rem;
+
+		input {
+			flex: 1;
+		}
 	}
 </style>
