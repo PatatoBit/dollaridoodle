@@ -22,8 +22,8 @@
 			height: 20
 		});
 
-		canvas.add();
-		canvas.remove();
+		canvas.add(rect);
+		canvas.remove(rect);
 
 		let brush = new PencilBrush(canvas);
 		brush.color = 'red';
