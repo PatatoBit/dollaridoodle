@@ -26,7 +26,7 @@
 		canvas.remove(rect);
 
 		let brush = new PencilBrush(canvas);
-		brush.color = 'red';
+		brush.color = '#212121';
 		brush.width = 4;
 		canvas.freeDrawingBrush = brush;
 

@@ -53,7 +53,7 @@
 	}
 
 	.main-title {
-		margin-top: 4rem;
+		margin-top: 3em;
 	}
 
 	.input-bar {
