@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+$primary: #14c57a;
+$black: #212121;
+$white: #fefefe;
+
 *,
 *::before,
 *::after {
@@ -30,12 +34,22 @@ input {
 }
 
 button {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	border: 1px solid #ccc;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	border-radius: 0.25rem;
-	background-color: #fff;
-	cursor: pointer;
+	border: none;
+
+	background-color: $primary;
+
+	img {
+		width: 30px;
+		height: 30px;
+	}
+}
+.icon {
+	aspect-ratio: 1/1;
+	width: 60px;
+	height: 60px;
 }

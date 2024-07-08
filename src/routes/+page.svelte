@@ -17,7 +17,9 @@
 
 		<div class="input-bar">
 			<input type="text" placeholder="Search or request a doodle" />
-			<button>Send</button>
+			<button class="icon">
+				<img src="/icons/arrow-up-right.svg" alt="Send arrow" />
+			</button>
 		</div>
 	</div>
 </main>
@@ -25,6 +27,7 @@
 <style lang="scss">
 	.canvas-container {
 		position: relative;
+		overflow: hidden;
 	}
 
 	main {
@@ -41,6 +44,9 @@
 		flex-direction: column;
 		align-items: center;
 		height: 100%;
+
+		max-width: 60rem;
+		margin: 2rem;
 		gap: 2rem;
 	}
 
@@ -51,6 +57,7 @@
 	.input-bar {
 		width: 100%;
 		display: flex;
+		flex-direction: row;
 		gap: 1rem;
 	}
 </style>
