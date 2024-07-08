@@ -40,12 +40,17 @@ button {
 	align-items: center;
 	border-radius: 0.25rem;
 	border: none;
+	cursor: pointer;
 
 	background-color: $primary;
 
 	img {
 		width: 30px;
 		height: 30px;
+	}
+
+	&:active {
+		transform: scale(0.95);
 	}
 }
 .icon {
