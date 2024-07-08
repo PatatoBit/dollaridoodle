@@ -26,7 +26,4 @@ pnpm build
 ```
 
 
-### possible names that could be changed to
-- dollaridoodle
-- the million dollar canvas
-- internet real estate
+[View Todo](/todo.md)
