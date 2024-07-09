@@ -3,10 +3,12 @@
 </script>
 
 <main>
+	<img src="/images/audience.png" alt="Audience" class="audience" />
 	<div class="main-container">
 		<h1 class="main-title mono">DollariDoodle</h1>
 
 		<div class="canvas-container">
+			<img src="/images/frame.png" alt="Canvas Frame" class="frame" />
 			<MainCanvas />
 		</div>
 
@@ -25,11 +27,25 @@
 </main>
 
 <style lang="scss">
+	.audience {
+		width: 60rem;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.frame {
+		z-index: 10;
+		position: absolute;
+		height: 30em;
+		top: -2rem;
+		left: -2rem;
+	}
+
 	.canvas-container {
 		position: relative;
-		overflow: hidden;
-
+		overflow: visible;
 		width: 100%;
+		margin: 2rem 0;
 	}
 
 	main {
