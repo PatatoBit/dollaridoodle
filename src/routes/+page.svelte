@@ -71,7 +71,7 @@
 	}
 
 	.main-title {
-		margin-top: 3em;
+		margin-top: 2em;
 	}
 
 	.input-bar {
