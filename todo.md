@@ -1,7 +1,17 @@
 # Todo
 
-## Canvas
+## General
 - Responsive to small screen size
+- Authentication
+  - Google
+  - Discord
+  - Facebook
+- Search bar search for matching doodles
+- Button send to payment
+  - Only if signed in
+- Progress stats
+
+## Canvas
 - Zooming
 - Panning
 
@@ -16,13 +26,3 @@
 - More controls
   - Change color
   - Change size (?)
-
-## General
-- Search bar search for matching doodles
-- Button send to payment
-  - Only if signed in
-- Progress stats
-- Authentication
-  - Google
-  - Discord
-  - Facebook
