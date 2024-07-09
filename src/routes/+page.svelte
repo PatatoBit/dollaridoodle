@@ -34,11 +34,10 @@
 	}
 
 	.frame {
-		z-index: 10;
 		position: absolute;
 		height: 30em;
-		top: -2rem;
-		left: -2rem;
+		top: -2.7rem;
+		left: -2.4rem;
 	}
 
 	.canvas-container {
