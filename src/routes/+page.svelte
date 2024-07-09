@@ -30,7 +30,9 @@
 	.audience {
 		width: 60rem;
 		position: absolute;
+		pointer-events: none;
 		bottom: 0;
+		z-index: 0;
 	}
 
 	.frame {
@@ -49,11 +51,12 @@
 
 	main {
 		display: flex;
+		position: relative;
 		flex-direction: column;
 		align-items: center;
 
 		width: 100%;
-		height: 100vh;
+		min-height: 100vh;
 	}
 
 	.main-container {
