@@ -38,17 +38,15 @@
 	}
 </script>
 
-<!-- <canvas id="c"></canvas> -->
+<canvas id="c"></canvas>
 
-<img class="test" src="https://baconmockup.com/600/400" alt="Bacon Mockup" />
+<!-- <img class="test" src="https://baconmockup.com/600/400" alt="Bacon Mockup" /> -->
 
 <style lang="scss">
-	canvas,
-	.test {
-		width: 100%;
-		height: 100%;
-		border: 1px solid #212121;
+	canvas {
+		position: absolute;
 		object-fit: cover;
 		max-width: 100%;
+		z-index: 10;
 	}
 </style>

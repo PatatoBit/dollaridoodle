@@ -9,7 +9,7 @@
 
 		<div class="canvas-container">
 			<MainCanvas />
-			<!-- <img src="/images/frame.png" alt="Canvas Frame" class="frame" /> -->
+			<img src="/images/frame.png" alt="Canvas Frame" class="frame" />
 		</div>
 
 		<div class="details">
@@ -43,14 +43,18 @@
 	.frame {
 		position: absolute;
 		width: 100%;
+		z-index: -1;
 		top: -0.15rem;
 		left: -0.05rem;
 	}
 
 	.canvas-container {
-		border: 1px solid blue;
+		display: block;
+		position: relative;
+
+		aspect-ratio: 3/2;
 		overflow: hidden;
-		max-width: 100%;
+		width: 100%;
 	}
 
 	.main-container {
@@ -62,6 +66,7 @@
 		max-width: 100%;
 		margin: 2rem;
 		gap: 2rem;
+		padding: 1rem;
 	}
 
 	main {
