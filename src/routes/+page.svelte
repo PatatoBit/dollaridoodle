@@ -8,7 +8,6 @@
 		<div class="logo">
 			<img src="/images/logo.png" alt="Doodle Logo" />
 		</div>
-
 		<div class="canvas-container">
 			<div class="frame">
 				<img src="/images/frame.png" alt="Canvas Frame" />
@@ -32,7 +31,7 @@
 
 <style lang="scss">
 	.audience {
-		width: 100%;
+		width: 60vw;
 		position: fixed;
 		pointer-events: none;
 		overflow: hidden;
@@ -45,7 +44,8 @@
 	}
 
 	.logo {
-		width: 20rem;
+		max-width: 20rem;
+		margin-top: 2rem;
 		img {
 			width: 100%;
 			object-fit: contain;
@@ -84,12 +84,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 100%;
+		justify-content: center;
 
 		max-width: 100%;
-		margin: 2rem;
+		height: 100%;
 		gap: 2rem;
-		padding: 1rem;
+		padding: 0 1rem;
 	}
 
 	main {
