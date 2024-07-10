@@ -32,7 +32,7 @@
 
 <style lang="scss">
 	.audience {
-		width: 60rem;
+		width: 100%;
 		position: fixed;
 		pointer-events: none;
 		overflow: hidden;
