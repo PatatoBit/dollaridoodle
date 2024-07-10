@@ -5,7 +5,9 @@
 <main>
 	<img src="/images/audience.png" alt="Audience" class="audience" />
 	<div class="main-container">
-		<h1 class="main-title mono">DollariDoodle</h1>
+		<div class="logo">
+			<img src="/images/logo.png" alt="Doodle Logo" />
+		</div>
 
 		<div class="canvas-container">
 			<div class="frame">
@@ -40,6 +42,14 @@
 
 	.details {
 		position: relative;
+	}
+
+	.logo {
+		width: 20rem;
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
 	}
 
 	.frame {
@@ -90,10 +100,6 @@
 
 		width: 100%;
 		min-height: 100vh;
-	}
-
-	.main-title {
-		margin-top: 2em;
 	}
 
 	.input-bar {
