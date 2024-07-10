@@ -52,7 +52,9 @@
 
 		pointer-events: none;
 		img {
-			width: 40rem;
+			width: 107%;
+			height: 115%;
+			object-fit: contain;
 			z-index: 1;
 		}
 	}
