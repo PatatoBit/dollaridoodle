@@ -8,8 +8,8 @@
 		<h1 class="main-title mono">DollariDoodle</h1>
 
 		<div class="canvas-container">
-			<img src="/images/frame.png" alt="Canvas Frame" class="frame" />
 			<MainCanvas />
+			<!-- <img src="/images/frame.png" alt="Canvas Frame" class="frame" /> -->
 		</div>
 
 		<div class="details">
@@ -31,22 +31,37 @@
 		width: 60rem;
 		position: absolute;
 		pointer-events: none;
+		overflow: hidden;
 		bottom: 0;
 		z-index: 0;
 	}
 
+	.details {
+		position: relative;
+	}
+
 	.frame {
 		position: absolute;
-		height: 30em;
-		top: -2.7rem;
-		left: -2.4rem;
+		width: 100%;
+		top: -0.15rem;
+		left: -0.05rem;
 	}
 
 	.canvas-container {
-		position: relative;
-		overflow: visible;
-		width: 100%;
-		margin: 2rem 0;
+		border: 1px solid blue;
+		overflow: hidden;
+		max-width: 100%;
+	}
+
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+
+		max-width: 100%;
+		margin: 2rem;
+		gap: 2rem;
 	}
 
 	main {
@@ -59,23 +74,13 @@
 		min-height: 100vh;
 	}
 
-	.main-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: 100%;
-
-		max-width: 60rem;
-		margin: 2rem;
-		gap: 2rem;
-	}
-
 	.main-title {
 		margin-top: 2em;
 	}
 
 	.input-bar {
 		width: 100%;
+		display: block;
 		display: flex;
 		flex-direction: row;
 		gap: 1rem;
