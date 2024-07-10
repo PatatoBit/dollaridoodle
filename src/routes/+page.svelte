@@ -8,8 +8,10 @@
 		<h1 class="main-title mono">DollariDoodle</h1>
 
 		<div class="canvas-container">
+			<div class="frame">
+				<img src="/images/frame.png" alt="Canvas Frame" />
+			</div>
 			<MainCanvas />
-			<img src="/images/frame.png" alt="Canvas Frame" class="frame" />
 		</div>
 
 		<div class="details">
@@ -43,9 +45,16 @@
 	.frame {
 		position: absolute;
 		width: 100%;
-		z-index: -1;
-		top: -0.15rem;
-		left: -0.05rem;
+		height: 100%;
+		z-index: 1;
+		top: -1.5rem;
+		left: -1rem;
+
+		pointer-events: none;
+		img {
+			width: 40rem;
+			z-index: 1;
+		}
 	}
 
 	.canvas-container {
@@ -55,6 +64,8 @@
 		aspect-ratio: 3/2;
 		overflow: hidden;
 		width: 100%;
+
+		border-image: url('/images/frame.png') 30;
 	}
 
 	.main-container {

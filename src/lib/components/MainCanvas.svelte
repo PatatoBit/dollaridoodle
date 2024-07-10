@@ -40,13 +40,10 @@
 
 <canvas id="c"></canvas>
 
-<!-- <img class="test" src="https://baconmockup.com/600/400" alt="Bacon Mockup" /> -->
-
 <style lang="scss">
 	canvas {
 		position: absolute;
 		object-fit: cover;
 		max-width: 100%;
-		z-index: 10;
 	}
 </style>
