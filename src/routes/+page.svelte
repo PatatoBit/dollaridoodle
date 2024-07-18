@@ -1,9 +1,9 @@
 <main class="center">
 	<div class="wrapper">
-		<h1 class="fancy">Generate your art ideas</h1>
-		<h1 class="fancy">but with a <span class="mono">human</span></h1>
+		<h1 class="fancy hero">Generate your art ideas</h1>
+		<h1 class="fancy hero">but with a <span class="mono">human</span></h1>
 
-		<p>image generation app but a human draws instead of AI</p>
+		<p>image generation but a human draws instead of AI</p>
 
 		<a href="/app">show me</a>
 	</div>
@@ -36,6 +36,10 @@
 </article>
 
 <style lang="scss">
+	.hero {
+		color: var(--primary);
+	}
+
 	.center {
 		display: flex;
 		flex-direction: column;
