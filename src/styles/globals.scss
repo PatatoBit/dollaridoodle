@@ -13,13 +13,19 @@ $white: #fefefe;
 }
 
 html,
-body {
+body,
+.normal {
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 
 	background-color: $white;
 	color: $black;
+}
+
+.fancy {
+	font-family: 'Chobani Serif Web Semibold';
+	src: url('/fonts/ChobaniSerif-Semibold.woff') format('woff');
 }
 
 .mono {
@@ -66,7 +72,7 @@ button {
 }
 
 .wrapper {
-	max-width: 35rem;
+	max-width: 80rem;
 	display: flex;
 	flex-direction: column;
 	margin-inline: auto;
