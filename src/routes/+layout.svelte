@@ -3,3 +3,7 @@
 </script>
 
 <slot />
+
+<style lang="scss">
+	@import '../styles/variables.scss';
+</style>
