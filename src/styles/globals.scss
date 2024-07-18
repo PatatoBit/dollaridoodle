@@ -58,10 +58,18 @@ button {
 		transform: scale(0.95);
 	}
 }
+
 .icon {
 	aspect-ratio: 1/1;
 	width: 60px;
 	height: 60px;
 
 	padding: 0.5rem;
+}
+
+.wrapper {
+	max-width: 35rem;
+	display: flex;
+	flex-direction: column;
+	margin-inline: auto;
 }
