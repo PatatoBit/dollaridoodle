@@ -26,4 +26,6 @@ pnpm build
 ```
 
 
+[Figma Design](https://www.figma.com/design/yZAsvvBTfJO60Ib1eJCk3m/dollaridoodle?node-id=0-1&t=0Cf9zllKBjbplVCb-1)
+
 [View Todo](/todo.md)
