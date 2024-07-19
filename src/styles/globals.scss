@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 *::before,
 *::after {
 	box-sizing: border-box;
@@ -11,7 +10,9 @@ html,
 body,
 .normal {
 	font-family: 'Inter', sans-serif;
-	font-size: 16px;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings: 'slnt' 0;
 
 	background-color: var(--background);
 	color: var(--text);
@@ -19,20 +20,28 @@ body,
 	padding: 0 !important;
 }
 
-// .fancy {
-// 	font-family: 'Chobani Serif Web Semibold';
-// 	src: url('/fonts/ChobaniSerif-Semibold.woff') format('woff');
-// }
+.fancy {
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
 
 .mono {
 	font-family: 'Roboto Mono', monospace;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+
 h1 {
 	font-size: 3rem;
 	color: var(--primary);
-	margin: 0;
-	padding: 0;
 }
 
 input {
