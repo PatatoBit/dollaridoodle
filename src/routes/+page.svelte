@@ -16,6 +16,7 @@
 				<div class="about-image"></div>
 
 				<h4>Request a doodle</h4>
+				<p>anything your mind can think of</p>
 			</div>
 
 			<div class="about">
@@ -56,5 +57,17 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 5rem;
+
+		.about {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.about-image {
+				width: 100px;
+				height: 100px;
+				background-color: var(--primary);
+			}
+		}
 	}
 </style>

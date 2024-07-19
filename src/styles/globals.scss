@@ -3,6 +3,8 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html,
@@ -13,15 +15,14 @@ body,
 
 	background-color: var(--background);
 	color: var(--text);
-
-	margin: 0;
-	padding: 0;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
-.fancy {
-	font-family: 'Chobani Serif Web Semibold';
-	src: url('/fonts/ChobaniSerif-Semibold.woff') format('woff');
-}
+// .fancy {
+// 	font-family: 'Chobani Serif Web Semibold';
+// 	src: url('/fonts/ChobaniSerif-Semibold.woff') format('woff');
+// }
 
 .mono {
 	font-family: 'Roboto Mono', monospace;
@@ -30,6 +31,8 @@ body,
 h1 {
 	font-size: 3rem;
 	color: var(--primary);
+	margin: 0;
+	padding: 0;
 }
 
 input {
