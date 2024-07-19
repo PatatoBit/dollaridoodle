@@ -1,3 +1,10 @@
+<script lang="ts">
+	let isDarkMode: boolean;
+	const toggleDarkMode = () => {
+		document.body.classList.toggle('dark', isDarkMode);
+	};
+</script>
+
 <main class="page">
 	<div class="wrapper">
 		<div class="landing">
@@ -7,6 +14,9 @@
 			<p>image generation but a human draws instead of AI</p>
 
 			<a href="/app"> <button>Show me</button></a>
+			<div>
+				<button on:click={toggleDarkMode}>Toggle Dark / Light</button>
+			</div>
 		</div>
 	</div>
 </main>
@@ -50,8 +60,8 @@
 	}
 
 	.landing {
-		margin-top: 7rem;
 		width: 100%;
+		padding-top: 7rem;
 
 		display: flex;
 		flex-direction: column;
