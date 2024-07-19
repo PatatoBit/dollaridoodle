@@ -1,11 +1,13 @@
 <main class="page">
-	<div class="wrapper landing">
-		<h1 class="fancy hero">Generate your art ideas</h1>
-		<h1 class="fancy hero">but with a <span class="mono">human</span></h1>
+	<div class="wrapper">
+		<div class="landing">
+			<h1 class="fancy hero">Generate your art ideas</h1>
+			<h1 class="fancy hero">but with a <span class="mono">human</span></h1>
 
-		<p>image generation but a human draws instead of AI</p>
+			<p>image generation but a human draws instead of AI</p>
 
-		<a href="/app"> <button>Show me</button></a>
+			<a href="/app"> <button>Show me</button></a>
+		</div>
 	</div>
 </main>
 
@@ -49,16 +51,11 @@
 
 	.landing {
 		margin-top: 7rem;
-	}
+		width: 100%;
 
-	.center {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
-		min-height: 65vh;
+		gap: 1rem;
 	}
 
 	.abouts {
@@ -66,6 +63,7 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: space-between;
 		gap: 5rem;
 
 		.about {

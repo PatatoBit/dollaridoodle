@@ -91,13 +91,11 @@ button,
 }
 
 .page {
-	display: flex;
-	flex-direction: column;
 	min-height: 80vh;
 }
 
 .wrapper {
-	max-width: 80rem;
+	max-width: 55rem;
 	margin-inline: auto;
 	display: flex;
 	flex-direction: column;
