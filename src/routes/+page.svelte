@@ -10,6 +10,8 @@
 
 			<p class="label">image generation with human touch</p>
 
+			<br />
+
 			<a href="/app"> <button>let's go</button></a>
 			<div></div>
 		</div>
