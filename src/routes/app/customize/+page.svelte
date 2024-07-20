@@ -5,11 +5,11 @@
 
 <div class="page">
 	<div class="wrapper">
-		<div class="layout">
+		<form class="layout" method="post" action="?/checkout">
 			<div class="custom">
 				<div>
 					<p class="label">Your prompt</p>
-					<input type="text" bind:value={prompt} required />
+					<input type="text" name="prompt" bind:value={prompt} required />
 				</div>
 
 				<div class="inputs">
@@ -25,7 +25,7 @@
 							<p class="label">won't show up in the public gallery</p>
 						</div>
 
-						<input type="checkbox" />
+						<input type="checkbox" name="private" />
 					</div>
 
 					<div class="input">
@@ -34,7 +34,7 @@
 							<p class="label">your request will be ahead in the queue</p>
 						</div>
 
-						<input type="checkbox" />
+						<input type="checkbox" name="express" />
 					</div>
 				</div>
 			</div>
@@ -54,9 +54,9 @@
 
 				<br />
 
-				<button>Make it happen</button>
+				<button type="submit">Make it happen</button>
 			</div>
-		</div>
+		</form>
 	</div>
 </div>
 
@@ -126,16 +126,5 @@
 		width: 100%;
 		aspect-ratio: 1;
 		border: 1px solid var(--text);
-	}
-
-	input {
-		display: block;
-		border: none;
-		border-radius: 0;
-		padding: 0.5rem 0;
-		outline: none;
-		border-bottom: 1px solid var(--text);
-		width: 100%;
-		align-self: stretch;
 	}
 </style>

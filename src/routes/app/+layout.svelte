@@ -11,10 +11,14 @@
 <SignedOut let:auth>
 	<main class="page">
 		<div class="wrapper">
-			<h2>Get started for free</h2>
-			<p>Sign up and get a free first request</p>
+			<div class="container">
+				<div>
+					<h2>Get started for free</h2>
+					<p>Sign up and get a free first request</p>
+				</div>
 
-			<button on:click={() => SignInWithGoogle(auth)}>Sign in with Google</button>
+				<button on:click={async () => await SignInWithGoogle(auth)}>Sign in with Google</button>
+			</div>
 		</div>
 	</main>
 </SignedOut>
@@ -23,6 +27,17 @@
 	.page {
 		display: flex;
 		align-items: center;
+		gap: 2rem;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
 		gap: 1rem;
+		text-align: center;
 	}
 </style>
