@@ -1,7 +1,7 @@
 # dollaridoodle
 Image generation but instead of an AI doing it, a real human is drawing it for food money.
 
-Every doodle will be on the same canvas with labels kinda like [r/place](https://reddit.com/r/place)
+Every doodle will be displayed on the public gallery for anyone to enjoy anyon's *creative prompts* (unless chosen to be private)
 
 I made this to hopefully make some money for my studies and more eqipments to make more stuffs like this!
 
