@@ -6,7 +6,7 @@
 <main class="page">
 	<div class="wrapper">
 		<SignedIn let:auth>
-			<form class="input-bar" action="app/submit">
+			<form class="input-bar" action="app/checkout">
 				<input type="text" placeholder="Prompt.." name="prompt" required />
 				<button class="icon" type="submit">
 					<img src="/icons/arrow-up-right.svg" alt="Send arrow" />

@@ -7,10 +7,12 @@
 	<div class="wrapper">
 		<div class="layout">
 			<div class="custom">
-				<form action="">
+				<div>
 					<p class="label">Your prompt</p>
 					<input type="text" bind:value={prompt} required />
+				</div>
 
+				<div class="inputs">
 					<div class="input">
 						<div>
 							<p>Resolution</p>
@@ -34,7 +36,7 @@
 
 						<input type="checkbox" />
 					</div>
-				</form>
+				</div>
 			</div>
 
 			<div class="checkout"></div>
@@ -64,6 +66,13 @@
 		justify-content: center;
 		width: 100%;
 		flex: 2;
+		gap: 4rem;
+	}
+
+	.inputs {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 	}
 
 	.input {
@@ -71,6 +80,15 @@
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+
+		div {
+			flex: auto;
+		}
+
+		input[type='checkbox'] {
+			aspect-ratio: 1;
+			width: 1.2rem;
+		}
 	}
 
 	.checkout {
