@@ -22,7 +22,7 @@
 	<div class="wrapper">
 		<div class="abouts">
 			<div class="about">
-				<div class="about-image"></div>
+				<img class="about-image" src="/images/funnicat.png" alt="funni cat prompt" />
 
 				<div class="about-text">
 					<h4>Request a doodle</h4>
@@ -31,7 +31,7 @@
 			</div>
 
 			<div class="about">
-				<div class="about-image"></div>
+				<img class="about-image" src="/images/draw.png" alt="human drawing" />
 
 				<div class="about-text">
 					<h4>A human draws your idea</h4>
@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="about">
-				<div class="about-image"></div>
+				<img class="about-image" src="/images/yours.png" alt="funni cat drawing" />
 
 				<div class="about-text">
 					<h4>Use it in any way you want</h4>
@@ -77,17 +77,32 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			width: 13rem;
+			height: 20rem;
 			gap: 1rem;
 
 			.about-text {
 				text-align: center;
 				line-height: 25px;
+				flex: 1;
 			}
 
 			.about-image {
-				width: 100px;
-				height: 100px;
-				background-color: var(--primary);
+				max-width: 10rem;
+				max-height: 15rem;
+				object-fit: contain;
+				flex: 2;
+			}
+		}
+	}
+
+	@media (max-width: 850px) {
+		.abouts {
+			flex-direction: column;
+			gap: 2rem;
+
+			.about {
+				width: 100%;
 			}
 		}
 	}
