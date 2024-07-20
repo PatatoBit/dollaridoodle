@@ -1,5 +1,6 @@
 <script lang="ts">
-	let isSignedIn: boolean = false;
+	import { SignedIn, SignedOut } from 'sveltefire';
+
 	let promptValue: string = '';
 
 	const formSubmit = () => {};
@@ -7,19 +8,21 @@
 
 <main class="page">
 	<div class="wrapper">
-		{#if isSignedIn}
+		<SignedIn>
 			<form class="input-bar" on:submit={formSubmit}>
 				<input type="text" placeholder="Prompt.." bind:value={promptValue} />
 				<button class="icon" type="submit">
 					<img src="/icons/arrow-up-right.svg" alt="Send arrow" />
 				</button>
 			</form>
-		{:else}
+		</SignedIn>
+
+		<SignedOut>
 			<h2>Get started for free</h2>
 			<p>Sign up and get a free first request</p>
 
-			<button>Login in with Google</button>
-		{/if}
+			<button>Sign in with Google</button>
+		</SignedOut>
 	</div>
 </main>
 
