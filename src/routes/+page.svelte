@@ -6,7 +6,10 @@
 	<div class="wrapper">
 		<div class="landing">
 			<h1 class="hero">Generate your art</h1>
-			<h1 class="hero">with a <span class="mono">human</span></h1>
+			<h1 class="hero">
+				with a
+				<img class="human" src="/images/human.png" alt="human" />
+			</h1>
 
 			<p class="label">image generation with human touch</p>
 
@@ -54,6 +57,12 @@
 <style lang="scss">
 	.hero {
 		color: var(--primary);
+		justify-content: center;
+	}
+
+	.human {
+		max-height: 3rem;
+		margin-left: 0.7rem;
 	}
 
 	.landing {
@@ -79,7 +88,6 @@
 			align-items: center;
 			width: 13rem;
 			height: 20rem;
-			gap: 1rem;
 
 			.about-text {
 				text-align: center;
