@@ -8,8 +8,8 @@
 <main class="page">
 	<div class="wrapper">
 		<div class="landing">
-			<h1 class="fancy hero">Generate your art ideas</h1>
-			<h1 class="fancy hero">but with a <span class="mono">human</span></h1>
+			<h1 class="hero">Generate your art ideas</h1>
+			<h1 class="hero">but with a <span class="mono">human</span></h1>
 
 			<p>image generation but a human draws instead of AI</p>
 
@@ -72,7 +72,7 @@
 		width: 100%;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
+		flex-flow: row wrap;
 		justify-content: space-between;
 		gap: 5rem;
 

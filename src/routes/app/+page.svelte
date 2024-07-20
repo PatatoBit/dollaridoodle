@@ -1,11 +1,25 @@
+<script lang="ts">
+	let isSignedIn: boolean = false;
+	let promptValue: string = '';
+
+	const formSubmit = () => {};
+</script>
+
 <main class="page">
 	<div class="wrapper">
-		<div class="input-bar">
-			<input type="text" placeholder="Prompt.." />
-			<button class="icon">
-				<img src="/icons/arrow-up-right.svg" alt="Send arrow" />
-			</button>
-		</div>
+		{#if isSignedIn}
+			<form class="input-bar" on:submit={formSubmit}>
+				<input type="text" placeholder="Prompt.." bind:value={promptValue} />
+				<button class="icon" type="submit">
+					<img src="/icons/arrow-up-right.svg" alt="Send arrow" />
+				</button>
+			</form>
+		{:else}
+			<h2>Get started for free</h2>
+			<p>Sign up and get a free first request</p>
+
+			<button>Login in with Google</button>
+		{/if}
 	</div>
 </main>
 
