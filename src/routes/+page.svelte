@@ -8,7 +8,7 @@
 			<h1 class="hero">Generate your art</h1>
 			<h1 class="hero">
 				with a
-				<img class="human" src="/images/human.png" alt="human" />
+				<img class="human invert" src="/images/human.png" alt="human" />
 			</h1>
 
 			<p class="label">image generation with human touch</p>
@@ -25,7 +25,7 @@
 	<div class="wrapper">
 		<div class="abouts">
 			<div class="about">
-				<img class="about-image" src="/images/funnicat.png" alt="funni cat prompt" />
+				<img class="about-image invert" src="/images/funnicat.png" alt="funni cat prompt" />
 
 				<div class="about-text">
 					<h4>Request a doodle</h4>
@@ -34,7 +34,7 @@
 			</div>
 
 			<div class="about">
-				<img class="about-image" src="/images/draw.png" alt="human drawing" />
+				<img class="about-image invert" src="/images/draw.png" alt="human drawing" />
 
 				<div class="about-text">
 					<h4>A human draws your idea</h4>
@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="about">
-				<img class="about-image" src="/images/yours.png" alt="funni cat drawing" />
+				<img class="about-image invert" src="/images/yours.png" alt="funni cat drawing" />
 
 				<div class="about-text">
 					<h4>Use it in any way you want</h4>
@@ -58,6 +58,10 @@
 	.hero {
 		color: var(--primary);
 		justify-content: center;
+	}
+
+	.invert {
+		filter: invert(var(--invert));
 	}
 
 	.human {

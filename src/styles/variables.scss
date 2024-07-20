@@ -4,6 +4,8 @@
 	--text: #212121;
 	--text-dim: #757575;
 	--background: #f2efe4;
+
+	--invert: 0;
 }
 
 :global(.dark) {
@@ -12,4 +14,6 @@
 	--text: #d6d6d6;
 	--text-dim: #b3b3b3;
 	--background: #2c2c3d;
+
+	--invert: 1;
 }
