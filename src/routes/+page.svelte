@@ -8,7 +8,7 @@
 			<h1 class="hero">Generate your art ideas</h1>
 			<h1 class="hero">but with a <span class="mono">human</span></h1>
 
-			<p>image generation but a human draws instead of AI</p>
+			<p class="label">image generation but a human draws instead of AI</p>
 
 			<a href="/app"> <button>Show me</button></a>
 			<div></div>
