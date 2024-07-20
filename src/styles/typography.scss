@@ -1,0 +1,32 @@
+.fancy {
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+.mono {
+	font-family: 'Roboto Mono', monospace;
+}
+
+.label {
+	font-size: 14px;
+	color: var(--text-dim);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 3rem;
+	color: var(--primary);
+}
+
+p {
+	font-size: 18px;
+}

@@ -1,5 +1,8 @@
 <script lang="ts">
 	import '../styles/globals.scss';
+	import '../styles/typography.scss';
+
+	import Layout from '$lib/components/Layout.svelte';
 
 	import { initializeApp } from 'firebase/app';
 	import { getAuth } from 'firebase/auth';
@@ -17,12 +20,14 @@
 	};
 
 	const app = initializeApp(firebaseConfig);
-	const firestore = getFirestore(app);
-	const auth = getAuth(app);
+	export const firestore = getFirestore(app);
+	export const auth = getAuth(app);
 </script>
 
 <FirebaseApp {auth} {firestore}>
-	<slot />
+	<Layout>
+		<slot />
+	</Layout>
 </FirebaseApp>
 
 <style lang="scss">

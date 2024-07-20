@@ -1,8 +1,5 @@
 <script lang="ts">
 	let isDarkMode: boolean;
-	const toggleDarkMode = () => {
-		document.body.classList.toggle('dark', isDarkMode);
-	};
 </script>
 
 <main class="page">
@@ -14,9 +11,7 @@
 			<p>image generation but a human draws instead of AI</p>
 
 			<a href="/app"> <button>Show me</button></a>
-			<div>
-				<button on:click={toggleDarkMode}>Toggle Dark / Light</button>
-			</div>
+			<div></div>
 		</div>
 	</div>
 </main>
@@ -29,7 +24,7 @@
 
 				<div class="about-text">
 					<h4>Request a doodle</h4>
-					<p>anything you can think of</p>
+					<p class="label">anything you can think of</p>
 				</div>
 			</div>
 
@@ -38,7 +33,7 @@
 
 				<div class="about-text">
 					<h4>A human draws your idea</h4>
-					<p>instead of an AI model</p>
+					<p class="label">instead of an AI model</p>
 				</div>
 			</div>
 
@@ -47,7 +42,7 @@
 
 				<div class="about-text">
 					<h4>Use it in any way you want</h4>
-					<p>it's completely yours</p>
+					<p class="label">it's completely yours</p>
 				</div>
 			</div>
 		</div>
@@ -84,6 +79,7 @@
 
 			.about-text {
 				text-align: center;
+				line-height: 25px;
 			}
 
 			.about-image {
