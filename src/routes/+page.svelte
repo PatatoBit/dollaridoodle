@@ -5,8 +5,8 @@
 <main class="page">
 	<div class="wrapper">
 		<div class="landing">
-			<h1 class="hero">Generate your art ideas</h1>
-			<h1 class="hero">but with a <span class="mono">human</span></h1>
+			<h1 class="hero">Generate your art</h1>
+			<h1 class="hero">with a <span class="mono">human</span></h1>
 
 			<p class="label">image generation but a human draws instead of AI</p>
 

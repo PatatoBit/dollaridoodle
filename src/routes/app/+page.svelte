@@ -1,17 +1,13 @@
 <script lang="ts">
 	import { SignInWithGoogle, SignOut } from '$lib/auth';
 	import { SignedIn, SignedOut } from 'sveltefire';
-
-	let promptValue: string = '';
-
-	const formSubmit = () => {};
 </script>
 
 <main class="page">
 	<div class="wrapper">
 		<SignedIn let:auth>
-			<form class="input-bar" on:submit={formSubmit}>
-				<input type="text" placeholder="Prompt.." bind:value={promptValue} />
+			<form class="input-bar" action="app/submit">
+				<input type="text" placeholder="Prompt.." name="prompt" />
 				<button class="icon" type="submit">
 					<img src="/icons/arrow-up-right.svg" alt="Send arrow" />
 				</button>
@@ -19,13 +15,6 @@
 
 			<button on:click={() => SignOut(auth)}>Sign out</button>
 		</SignedIn>
-
-		<SignedOut let:auth>
-			<h2>Get started for free</h2>
-			<p>Sign up and get a free first request</p>
-
-			<button on:click={() => SignInWithGoogle(auth)}>Sign in with Google</button>
-		</SignedOut>
 	</div>
 </main>
 
