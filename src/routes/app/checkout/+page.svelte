@@ -39,7 +39,23 @@
 				</div>
 			</div>
 
-			<div class="checkout"></div>
+			<div class="checkout">
+				<div class="preview-container"></div>
+
+				<div class="cost-line">
+					<p class="label">Small doodle</p>
+					<p class="label">1 Ticket</p>
+				</div>
+
+				<div class="cost-line">
+					<p>Total</p>
+					<p>1 Ticket</p>
+				</div>
+
+				<br />
+
+				<button>Make it happen</button>
+			</div>
 		</div>
 	</div>
 </div>
@@ -58,6 +74,7 @@
 		display: flex;
 		flex-direction: row;
 		width: 100%;
+		gap: 2rem;
 	}
 
 	.custom {
@@ -65,7 +82,7 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 100%;
-		flex: 2;
+		flex: 3;
 		gap: 4rem;
 	}
 
@@ -92,7 +109,23 @@
 	}
 
 	.checkout {
+		display: flex;
+		flex-direction: column;
 		flex: 1;
+		gap: 1rem;
+		padding: 1.2rem;
+		background: white;
+
+		.cost-line {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.preview-container {
+		width: 100%;
+		aspect-ratio: 1;
+		border: 1px solid var(--text);
 	}
 
 	input {
