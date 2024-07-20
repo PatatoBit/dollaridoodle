@@ -17,6 +17,8 @@
 						<div>
 							<p>Resolution</p>
 						</div>
+
+						<p>Small</p>
 					</div>
 
 					<div class="input">
