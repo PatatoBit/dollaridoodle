@@ -158,3 +158,41 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 
 [debug] [2024-07-21T13:54:19.441Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"handleStripeWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"handleStripeWebhook"}},"specVersion":"v1alpha1","requiredAPIs":[]}
 [info] ✔  functions: Loaded functions definitions from source: helloWorld, handleStripeWebhook. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, handleStripeWebhook."}}
+[debug] [2024-07-21T13:55:04.990Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2024-07-21T13:55:04.993Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2024-07-21T13:55:05.997Z] Validating nodejs source
+[debug] [2024-07-21T13:55:07.059Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.1",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-07-21T13:55:07.060Z] Building nodejs source
+[debug] [2024-07-21T13:55:07.061Z] Failed to find version of module node: reached end of search path /Users/patato/Documents/dollaridoodle/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-07-21T13:55:07.069Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-21T13:55:07.072Z] Found firebase-functions binary at '/Users/patato/Documents/dollaridoodle/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8945
+
+[debug] [2024-07-21T13:55:07.898Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"handleStripeWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"handleStripeWebhook"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, handleStripeWebhook. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, handleStripeWebhook."}}
