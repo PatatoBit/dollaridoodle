@@ -3,8 +3,7 @@ import Stripe from 'stripe';
 import type { Actions } from './$types';
 import { STRIPE_SECRET_KEY } from '$env/static/private';
 import { error, redirect } from '@sveltejs/kit';
-import { addDoc, collection } from 'firebase/firestore';
-import { db } from '$lib/firebase';
+import admin from 'firebase-admin';
 
 const stripe = new Stripe(STRIPE_SECRET_KEY);
 
@@ -17,7 +16,6 @@ export const actions: Actions = {
 		const prompt: string = formData.get('prompt') as string;
 		const isPrivate: boolean = formData.get('private') == 'on';
 		const isExpress: boolean = formData.get('express') == 'on';
-		const paymentsCollection = collection(db, 'payments');
 
 		console.log(prompt, isPrivate, isExpress);
 
@@ -41,11 +39,11 @@ export const actions: Actions = {
 			try {
 				console.log('Saving document');
 
-				await addDoc(paymentsCollection, {
+				await admin.firestore().collection('orders').add({
 					prompt,
 					isPrivate,
 					isExpress,
-					createdAt: new Date()
+					createdAt: admin.firestore.FieldValue.serverTimestamp()
 				});
 			} catch (error) {
 				console.error(error);

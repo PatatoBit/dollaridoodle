@@ -1,0 +1,504 @@
+[debug] [2024-07-21T05:47:52.186Z] ----------------------------------------------------------------------
+[debug] [2024-07-21T05:47:52.198Z] Command:       /opt/homebrew/Cellar/node/22.3.0/bin/node /opt/homebrew/bin/firebase emulators:start --only functions
+[debug] [2024-07-21T05:47:52.199Z] CLI Version:   13.13.3
+[debug] [2024-07-21T05:47:52.199Z] Platform:      darwin
+[debug] [2024-07-21T05:47:52.199Z] Node Version:  v22.3.0
+[debug] [2024-07-21T05:47:52.200Z] Time:          Sun Jul 21 2024 12:47:52 GMT+0700 (Indochina Time)
+[debug] [2024-07-21T05:47:52.200Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-21T05:47:52.512Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-21T05:47:52.512Z] > authorizing via signed-in user (pathonscript@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-07-21T05:47:53.069Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-07-21T05:47:53.070Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-07-21T05:47:53.075Z] [hub] writing locator at /var/folders/wd/v9g2t_m9463glqkghvpmw8kc0000gp/T/hub-dollarydoodle-17566.json
+[debug] [2024-07-21T05:47:53.373Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-07-21T05:47:53.374Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-07-21T05:47:53.374Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-07-21T05:47:53.376Z] defaultcredentials: writing to file /Users/patato/.config/firebase/pathonscript_gmail_com_application_default_credentials.json
+[debug] [2024-07-21T05:47:53.381Z] Setting GAC to /Users/patato/.config/firebase/pathonscript_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/patato/.config/firebase/pathonscript_gmail_com_application_default_credentials.json"}}
+[debug] [2024-07-21T05:47:53.382Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dollarydoodle-17566/adminSdkConfig [none]
+[debug] [2024-07-21T05:47:54.156Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dollarydoodle-17566/adminSdkConfig 200
+[debug] [2024-07-21T05:47:54.157Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dollarydoodle-17566/adminSdkConfig {"projectId":"dollarydoodle-17566","storageBucket":"dollarydoodle-17566.appspot.com"}
+[info] i  ui: downloading ui-v1.12.1.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.12.1.zip..."}}
+[debug] [2024-07-21T05:47:54.227Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.12.1.zip 
+[debug] [2024-07-21T05:47:54.732Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.12.1.zip 200
+[debug] [2024-07-21T05:47:54.733Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.12.1.zip [stream]
+[debug] [2024-07-21T05:47:56.419Z] Data is 3498269
+[debug] [2024-07-21T05:47:56.421Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-07-21T05:47:56.421Z] [unzip] Processing entry: client/
+[debug] [2024-07-21T05:47:56.421Z] [unzip] mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/
+[debug] [2024-07-21T05:47:56.431Z] [unzip] Entry: client/favicon.ico (compressed_size=2933 bytes, uncompressed_size=13294 bytes)
+[debug] [2024-07-21T05:47:56.431Z] [unzip] Processing entry: client/favicon.ico
+[debug] [2024-07-21T05:47:56.431Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.432Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/favicon.ico
+[debug] [2024-07-21T05:47:56.446Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=2034 bytes, uncompressed_size=2034 bytes)
+[debug] [2024-07-21T05:47:56.446Z] [unzip] Processing entry: client/mstile-150x150.png
+[debug] [2024-07-21T05:47:56.446Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.447Z] [unzip] Writing file: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/mstile-150x150.png
+[debug] [2024-07-21T05:47:56.449Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=293 bytes, uncompressed_size=293 bytes)
+[debug] [2024-07-21T05:47:56.450Z] [unzip] Processing entry: client/favicon-16x16.png
+[debug] [2024-07-21T05:47:56.450Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.451Z] [unzip] Writing file: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/favicon-16x16.png
+[debug] [2024-07-21T05:47:56.452Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=475 bytes, uncompressed_size=475 bytes)
+[debug] [2024-07-21T05:47:56.452Z] [unzip] Processing entry: client/favicon-32x32.png
+[debug] [2024-07-21T05:47:56.453Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.454Z] [unzip] Writing file: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/favicon-32x32.png
+[debug] [2024-07-21T05:47:56.455Z] [unzip] Entry: client/manifest.json (compressed_size=245 bytes, uncompressed_size=551 bytes)
+[debug] [2024-07-21T05:47:56.455Z] [unzip] Processing entry: client/manifest.json
+[debug] [2024-07-21T05:47:56.455Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.456Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/manifest.json
+[debug] [2024-07-21T05:47:56.457Z] [unzip] Entry: client/index.html (compressed_size=1365 bytes, uncompressed_size=3071 bytes)
+[debug] [2024-07-21T05:47:56.458Z] [unzip] Processing entry: client/index.html
+[debug] [2024-07-21T05:47:56.458Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.458Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/index.html
+[debug] [2024-07-21T05:47:56.460Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2024-07-21T05:47:56.460Z] [unzip] Processing entry: client/robots.txt
+[debug] [2024-07-21T05:47:56.461Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.461Z] [unzip] Writing file: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/robots.txt
+[debug] [2024-07-21T05:47:56.462Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=5369 bytes, uncompressed_size=5411 bytes)
+[debug] [2024-07-21T05:47:56.463Z] [unzip] Processing entry: client/android-chrome-512x512.png
+[debug] [2024-07-21T05:47:56.463Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.467Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/android-chrome-512x512.png
+[debug] [2024-07-21T05:47:56.469Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-07-21T05:47:56.469Z] [unzip] Processing entry: client/assets/
+[debug] [2024-07-21T05:47:56.469Z] [unzip] mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/
+[debug] [2024-07-21T05:47:56.469Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-07-21T05:47:56.470Z] [unzip] Processing entry: client/assets/img/
+[debug] [2024-07-21T05:47:56.470Z] [unzip] mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/img/
+[debug] [2024-07-21T05:47:56.470Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2024-07-21T05:47:56.470Z] [unzip] Processing entry: client/assets/img/database.png
+[debug] [2024-07-21T05:47:56.470Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/img
+[debug] [2024-07-21T05:47:56.470Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/img/database.png
+[debug] [2024-07-21T05:47:56.471Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-07-21T05:47:56.471Z] [unzip] Processing entry: client/assets/provider-icons/
+[debug] [2024-07-21T05:47:56.471Z] [unzip] mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/
+[debug] [2024-07-21T05:47:56.472Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2024-07-21T05:47:56.472Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2024-07-21T05:47:56.472Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.472Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_play_games.svg
+[debug] [2024-07-21T05:47:56.472Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2024-07-21T05:47:56.472Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2024-07-21T05:47:56.472Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.472Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_game_center.svg
+[debug] [2024-07-21T05:47:56.473Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2024-07-21T05:47:56.473Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_google.svg
+[debug] [2024-07-21T05:47:56.473Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.473Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_google.svg
+[debug] [2024-07-21T05:47:56.474Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2024-07-21T05:47:56.474Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2024-07-21T05:47:56.474Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.474Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_yahoo.svg
+[debug] [2024-07-21T05:47:56.475Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2024-07-21T05:47:56.475Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_email.svg
+[debug] [2024-07-21T05:47:56.475Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.475Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_email.svg
+[debug] [2024-07-21T05:47:56.476Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2024-07-21T05:47:56.476Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_saml.svg
+[debug] [2024-07-21T05:47:56.476Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.476Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_saml.svg
+[debug] [2024-07-21T05:47:56.477Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2024-07-21T05:47:56.477Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2024-07-21T05:47:56.477Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.477Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_oidc.svg
+[debug] [2024-07-21T05:47:56.479Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2024-07-21T05:47:56.479Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2024-07-21T05:47:56.479Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.479Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_facebook.svg
+[debug] [2024-07-21T05:47:56.479Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2024-07-21T05:47:56.479Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_github.svg
+[debug] [2024-07-21T05:47:56.479Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.480Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_github.svg
+[debug] [2024-07-21T05:47:56.480Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2024-07-21T05:47:56.480Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_phone.svg
+[debug] [2024-07-21T05:47:56.480Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.480Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_phone.svg
+[debug] [2024-07-21T05:47:56.480Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2024-07-21T05:47:56.481Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_apple.svg
+[debug] [2024-07-21T05:47:56.481Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.481Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_apple.svg
+[debug] [2024-07-21T05:47:56.481Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2024-07-21T05:47:56.481Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2024-07-21T05:47:56.481Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.481Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_twitter.svg
+[debug] [2024-07-21T05:47:56.481Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2024-07-21T05:47:56.481Z] [unzip] Processing entry: client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2024-07-21T05:47:56.481Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons
+[debug] [2024-07-21T05:47:56.481Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/provider-icons/auth_service_mslive.svg
+[debug] [2024-07-21T05:47:56.482Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-07-21T05:47:56.482Z] [unzip] Processing entry: client/assets/extensions/
+[debug] [2024-07-21T05:47:56.482Z] [unzip] mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/extensions/
+[debug] [2024-07-21T05:47:56.482Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2024-07-21T05:47:56.482Z] [unzip] Processing entry: client/assets/extensions/default-extension.png
+[debug] [2024-07-21T05:47:56.482Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/extensions
+[debug] [2024-07-21T05:47:56.482Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/extensions/default-extension.png
+[debug] [2024-07-21T05:47:56.483Z] [unzip] Entry: client/assets/index-Cj5I7867.css (compressed_size=35786 bytes, uncompressed_size=297937 bytes)
+[debug] [2024-07-21T05:47:56.483Z] [unzip] Processing entry: client/assets/index-Cj5I7867.css
+[debug] [2024-07-21T05:47:56.483Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets
+[debug] [2024-07-21T05:47:56.483Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/index-Cj5I7867.css
+[debug] [2024-07-21T05:47:56.484Z] [unzip] Entry: client/assets/index-JXEx31eZ.js (compressed_size=563896 bytes, uncompressed_size=2020866 bytes)
+[debug] [2024-07-21T05:47:56.485Z] [unzip] Processing entry: client/assets/index-JXEx31eZ.js
+[debug] [2024-07-21T05:47:56.485Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets
+[debug] [2024-07-21T05:47:56.485Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/index-JXEx31eZ.js
+[debug] [2024-07-21T05:47:56.504Z] [unzip] Entry: client/assets/index-JXEx31eZ.js.map (compressed_size=2229196 bytes, uncompressed_size=9596104 bytes)
+[debug] [2024-07-21T05:47:56.504Z] [unzip] Processing entry: client/assets/index-JXEx31eZ.js.map
+[debug] [2024-07-21T05:47:56.504Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets
+[debug] [2024-07-21T05:47:56.504Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/assets/index-JXEx31eZ.js.map
+[debug] [2024-07-21T05:47:56.681Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=1433 bytes, uncompressed_size=2611 bytes)
+[debug] [2024-07-21T05:47:56.681Z] [unzip] Processing entry: client/safari-pinned-tab.svg
+[debug] [2024-07-21T05:47:56.681Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.681Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/safari-pinned-tab.svg
+[debug] [2024-07-21T05:47:56.683Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2024-07-21T05:47:56.683Z] [unzip] Processing entry: client/browserconfig.xml
+[debug] [2024-07-21T05:47:56.683Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.683Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/browserconfig.xml
+[debug] [2024-07-21T05:47:56.684Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=2684 bytes, uncompressed_size=2684 bytes)
+[debug] [2024-07-21T05:47:56.684Z] [unzip] Processing entry: client/android-chrome-192x192.png
+[debug] [2024-07-21T05:47:56.684Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.684Z] [unzip] Writing file: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/android-chrome-192x192.png
+[debug] [2024-07-21T05:47:56.685Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=2123 bytes, uncompressed_size=2152 bytes)
+[debug] [2024-07-21T05:47:56.686Z] [unzip] Processing entry: client/apple-touch-icon.png
+[debug] [2024-07-21T05:47:56.686Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client
+[debug] [2024-07-21T05:47:56.686Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/client/apple-touch-icon.png
+[debug] [2024-07-21T05:47:56.688Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-07-21T05:47:56.688Z] [unzip] Processing entry: server/
+[debug] [2024-07-21T05:47:56.688Z] [unzip] mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/
+[debug] [2024-07-21T05:47:56.688Z] [unzip] Entry: server/server.mjs.map (compressed_size=286219 bytes, uncompressed_size=1310517 bytes)
+[debug] [2024-07-21T05:47:56.688Z] [unzip] Processing entry: server/server.mjs.map
+[debug] [2024-07-21T05:47:56.688Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server
+[debug] [2024-07-21T05:47:56.688Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/server.mjs.map
+[debug] [2024-07-21T05:47:56.719Z] [unzip] Entry: server/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2024-07-21T05:47:56.719Z] [unzip] Processing entry: server/assets/
+[debug] [2024-07-21T05:47:56.720Z] [unzip] mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/assets/
+[debug] [2024-07-21T05:47:56.720Z] [unzip] Entry: server/assets/multipart-parser-n20ATYm_.mjs.map (compressed_size=4790 bytes, uncompressed_size=17920 bytes)
+[debug] [2024-07-21T05:47:56.720Z] [unzip] Processing entry: server/assets/multipart-parser-n20ATYm_.mjs.map
+[debug] [2024-07-21T05:47:56.720Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/assets
+[debug] [2024-07-21T05:47:56.720Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/assets/multipart-parser-n20ATYm_.mjs.map
+[debug] [2024-07-21T05:47:56.720Z] [unzip] Entry: server/assets/multipart-parser-n20ATYm_.mjs (compressed_size=2625 bytes, uncompressed_size=10428 bytes)
+[debug] [2024-07-21T05:47:56.720Z] [unzip] Processing entry: server/assets/multipart-parser-n20ATYm_.mjs
+[debug] [2024-07-21T05:47:56.720Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/assets
+[debug] [2024-07-21T05:47:56.720Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/assets/multipart-parser-n20ATYm_.mjs
+[debug] [2024-07-21T05:47:56.721Z] [unzip] Entry: server/server.mjs (compressed_size=311497 bytes, uncompressed_size=1147307 bytes)
+[debug] [2024-07-21T05:47:56.721Z] [unzip] Processing entry: server/server.mjs
+[debug] [2024-07-21T05:47:56.721Z] [unzip] else mkdir: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server
+[debug] [2024-07-21T05:47:56.721Z] [unzip] deflating: /Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/server.mjs
+[debug] [2024-07-21T05:47:56.746Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-07-21T05:47:56.747Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-07-21T05:47:56.747Z] Starting Emulator UI with command {"binary":"node","args":["/Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/patato/.cache/firebase/emulators/ui-v1.12.1/server/server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-07-21T05:47:57.153Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-07-21T05:47:57.154Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/patato/Documents/dollaridoodle/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/patato/Documents/dollaridoodle/functions\" for Cloud Functions..."}}
+[debug] [2024-07-21T05:47:57.249Z] Validating nodejs source
+[debug] [2024-07-21T05:48:00.031Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-07-21T05:48:00.033Z] Building nodejs source
+[debug] [2024-07-21T05:48:00.036Z] Failed to find version of module node: reached end of search path /Users/patato/Documents/dollaridoodle/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-07-21T05:48:00.058Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-21T05:48:00.155Z] Found firebase-functions binary at '/Users/patato/Documents/dollaridoodle/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8489
+
+[debug] [2024-07-21T05:48:03.510Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/dollarydoodle-17566/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/dollarydoodle-17566/us-central1/helloWorld)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-07-21T05:48:40.035Z] [work-queue] {"queuedWork":["/dollarydoodle-17566/us-central1/helloWorld-2024-07-21T05:48:40.034Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-07-21T05:48:40.048Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/dollarydoodle-17566/us-central1/helloWorld-2024-07-21T05:48:40.034Z"],"workRunningCount":1}
+[debug] [2024-07-21T05:48:40.049Z] Accepted request GET /dollarydoodle-17566/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2024-07-21T05:48:40.053Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-07-21T05:48:40.059Z] [functions] Got req.url=/dollarydoodle-17566/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dollarydoodle-17566/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2024-07-21T05:48:40.123Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2024-07-21T05:48:40.125Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[info] >  (node:67720) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead. {"user":"(node:67720) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m (node:67720) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead."}}
+[info] >  (Use `node --trace-deprecation ...` to show where the warning was created) {"user":"(Use `node --trace-deprecation ...` to show where the warning was created)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m (Use `node --trace-deprecation ...` to show where the warning was created)"}}
+[debug] [2024-07-21T05:48:42.913Z] [runtime-status] [67720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.2.0","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-admin@12.2.0/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.2.0\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-admin@12.2.0/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-07-21T05:48:42.914Z] [runtime-status] [67720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-07-21T05:48:42.915Z] [runtime-status] [67720] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-07-21T05:48:42.915Z] [runtime-status] [67720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-07-21T05:48:44.295Z] [runtime-status] [67720] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-07-21T05:48:44.297Z] [runtime-status] [67720] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-07-21T05:48:44.298Z] [runtime-status] [67720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-07-21T05:48:44.300Z] [runtime-status] [67720] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.2.0","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-admin@12.2.0/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.2.0\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-admin@12.2.0/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-07-21T05:48:44.311Z] [runtime-status] [67720] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.0.1","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"5.0.1\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-functions@5.0.1_firebase-admin@12.2.0/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-07-21T05:48:44.312Z] [runtime-status] [67720] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.2.0","resolution":"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-admin@12.2.0/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.2.0\",\"resolution\":\"/Users/patato/Documents/dollaridoodle/functions/node_modules/.pnpm/firebase-admin@12.2.0/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-07-21T05:48:44.330Z] [runtime-status] [67720] Functions runtime initialized. {"cwd":"/Users/patato/Documents/dollaridoodle/functions","node_version":"22.3.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Functions runtime initialized. {\"cwd\":\"/Users/patato/Documents/dollaridoodle/functions\",\"node_version\":\"22.3.0\"}"}}
+[debug] [2024-07-21T05:48:44.340Z] [runtime-status] [67720] Listening to port: /var/folders/wd/v9g2t_m9463glqkghvpmw8kc0000gp/T/fire_emu_2390c4c7c8576488.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [67720] Listening to port: /var/folders/wd/v9g2t_m9463glqkghvpmw8kc0000gp/T/fire_emu_2390c4c7c8576488.sock"}}
+[debug] [2024-07-21T05:48:44.506Z] [worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: IDLE"}}
+[debug] [2024-07-21T05:48:44.507Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[info] i  functions: Beginning execution of "us-central1-helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"us-central1-helloWorld\""}}
+[debug] [2024-07-21T05:48:44.514Z] [worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: BUSY"}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2024-07-21T05:48:44.543Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloWorld" in 29.454291ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"us-central1-helloWorld\" in 29.454291ms"}}
+[debug] [2024-07-21T05:48:44.543Z] [worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: IDLE"}}
+[debug] [2024-07-21T05:48:44.544Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-07-21T05:48:44.546Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-07-21T05:48:44.547Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-07-21T05:48:44.653Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2024-07-21T06:00:15.062Z] File /Users/patato/Documents/dollaridoodle/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2024-07-21T06:00:16.119Z] Validating nodejs source
+[debug] [2024-07-21T06:00:20.424Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-07-21T06:00:20.425Z] Building nodejs source
+[debug] [2024-07-21T06:00:20.426Z] Failed to find version of module node: reached end of search path /Users/patato/Documents/dollaridoodle/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-07-21T06:00:20.442Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-21T06:00:20.447Z] Found firebase-functions binary at '/Users/patato/Documents/dollaridoodle/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8532
+
+[debug] [2024-07-21T06:00:21.409Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2024-07-21T06:00:26.626Z] [worker-pool] Shutting down IDLE worker (us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-helloWorld)"}}
+[debug] [2024-07-21T06:00:26.627Z] [worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: FINISHING"}}
+[debug] [2024-07-21T06:00:26.636Z] [worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: exited"}}
+[debug] [2024-07-21T06:00:26.636Z] [worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-91176442-fc7f-4c25-8825-15ad3d75e8ba]: FINISHED"}}
+[debug] [2024-07-21T06:00:33.275Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2024-07-21T06:00:33.277Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2024-07-21T06:00:34.286Z] Validating nodejs source
+[debug] [2024-07-21T06:00:35.396Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-07-21T06:00:35.398Z] Building nodejs source
+[debug] [2024-07-21T06:00:35.399Z] Failed to find version of module node: reached end of search path /Users/patato/Documents/dollaridoodle/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-07-21T06:00:35.401Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-21T06:00:35.404Z] Found firebase-functions binary at '/Users/patato/Documents/dollaridoodle/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8316
+
+[debug] [2024-07-21T06:00:37.291Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"stripeWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"stripeWebhook"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, stripeWebhook. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, stripeWebhook."}}
+[info] ✔  functions[us-central1-stripeWebhook]: http function initialized (http://127.0.0.1:5001/dollarydoodle-17566/us-central1/stripeWebhook). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/dollarydoodle-17566/us-central1/stripeWebhook)."}}
+[debug] [2024-07-21T06:15:10.201Z] File /Users/patato/Documents/dollaridoodle/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2024-07-21T06:15:11.356Z] Validating nodejs source
+[debug] [2024-07-21T06:15:13.931Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-07-21T06:15:13.932Z] Building nodejs source
+[debug] [2024-07-21T06:15:13.932Z] Failed to find version of module node: reached end of search path /Users/patato/Documents/dollaridoodle/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-07-21T06:15:13.943Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-21T06:15:13.951Z] Found firebase-functions binary at '/Users/patato/Documents/dollaridoodle/functions/node_modules/.bin/firebase-functions'
+[debug] [2024-07-21T06:15:13.959Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2024-07-21T06:15:13.976Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2024-07-21T06:15:14.256Z] File /Users/patato/Documents/dollaridoodle/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/src/index.ts changed, reloading triggers"}}
+[info] Serving at port 8719
+
+[debug] [2024-07-21T06:15:14.986Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"stripeWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"stripeWebhook"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-07-21T06:15:15.291Z] Validating nodejs source
+[debug] [2024-07-21T06:15:16.209Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-07-21T06:15:16.210Z] Building nodejs source
+[debug] [2024-07-21T06:15:16.210Z] Failed to find version of module node: reached end of search path /Users/patato/Documents/dollaridoodle/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-07-21T06:15:16.217Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-21T06:15:16.224Z] Found firebase-functions binary at '/Users/patato/Documents/dollaridoodle/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8007
+
+[debug] [2024-07-21T06:15:17.358Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"stripeWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"stripeWebhook"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-07-21T06:15:18.748Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2024-07-21T06:15:18.751Z] File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patato/Documents/dollaridoodle/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2024-07-21T06:15:19.753Z] Validating nodejs source
+[debug] [2024-07-21T06:15:21.661Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-07-21T06:15:21.662Z] Building nodejs source
+[debug] [2024-07-21T06:15:21.662Z] Failed to find version of module node: reached end of search path /Users/patato/Documents/dollaridoodle/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-07-21T06:15:21.694Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-21T06:15:21.702Z] Found firebase-functions binary at '/Users/patato/Documents/dollaridoodle/functions/node_modules/.bin/firebase-functions'
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, stripeWebhook. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, stripeWebhook."}}
+[info] Serving at port 8920
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, stripeWebhook. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, stripeWebhook."}}
+[debug] [2024-07-21T06:15:22.649Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"stripeWebhook":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"stripeWebhook"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, stripeWebhook. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, stripeWebhook."}}
