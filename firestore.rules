@@ -15,6 +15,14 @@ service cloud.firestore {
     match /{document=**} {
       allow read, write: if request.auth.uid != null;
     }
+
+    match /orders/{documentId} {
+      allow update: if exists(/databases/$(database)/documents/$(collection)/$(documentId)) &&
+      request.resource.id == resource.id;
+      allow create: if false;  // Block creation
+      allow delete: if false;  // Block deletion
+      allow read: if true;     // Allow read access (modify as needed)
+    }
   }
 
 }

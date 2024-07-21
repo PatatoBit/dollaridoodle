@@ -1,10 +1,11 @@
 import Stripe from 'stripe';
+import { error, redirect } from '@sveltejs/kit';
+import admin from 'firebase-admin';
 
 import type { Actions } from './$types';
 import { STRIPE_SECRET_KEY } from '$env/static/private';
-import { error, redirect } from '@sveltejs/kit';
-import admin from 'firebase-admin';
-import { db } from '$lib/firebaseAdmin';
+
+import * as serviceAccount from '../../../../serviceAccountKey.json';
 
 const stripe = new Stripe(STRIPE_SECRET_KEY);
 
@@ -24,7 +25,11 @@ export const actions: Actions = {
 			try {
 				console.log('Saving document');
 
-				docRef = await db.collection('orders').add({
+				admin.initializeApp({
+					credential: admin.credential.cert(serviceAccount as admin.ServiceAccount)
+				});
+
+				docRef = await admin.firestore().collection('orders').add({
 					status: 'PENDING',
 					prompt,
 					isPrivate,
