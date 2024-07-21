@@ -9,6 +9,7 @@
 
 import { onRequest } from 'firebase-functions/v2/https';
 import * as logger from 'firebase-functions/logger';
+import * as admin from 'firebase-admin';
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
@@ -19,5 +20,11 @@ export const helloWorld = onRequest((request, response) => {
 });
 
 export const stripeWebhook = onRequest((request, response) => {
+	admin.initializeApp();
+	const id = request.params[0];
+	admin.firestore().collection('payments').doc(id).update({
+		status: 'PAID'
+	});
+
 	response.sendStatus(200);
 });

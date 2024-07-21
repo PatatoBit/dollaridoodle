@@ -40,6 +40,7 @@ export const actions: Actions = {
 				console.log('Saving document');
 
 				await admin.firestore().collection('orders').add({
+					status: 'PENDING',
 					prompt,
 					isPrivate,
 					isExpress,
