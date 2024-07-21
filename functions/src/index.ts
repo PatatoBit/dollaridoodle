@@ -16,6 +16,8 @@ import Stripe from 'stripe';
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
 
+admin.initializeApp();
+
 export const helloWorld = onRequest((request, response) => {
 	logger.info('Hello logs!', { structuredData: true });
 	response.send('Hello from Firebase!');
@@ -41,21 +43,16 @@ export const handleStripeWebhook = onRequest(async (req, res) => {
 
 	if (event.type === 'checkout.session.completed') {
 		const session = event.data.object as Stripe.Checkout.Session;
-		const documentId = session.metadata?.documentId;
+		const payloadData = JSON.parse(session.metadata?.payloadData as string);
 
-		if (documentId) {
+		if (payloadData) {
 			try {
-				await admin
-					.firestore()
-					.collection('doodles')
-					.doc(documentId)
-					.update({ status: 'COMPLETED' });
-				console.log(`Document ${documentId} status updated to COMPLETED.`);
+				await admin.firestore().collection('doodles').add(payloadData);
 			} catch (error) {
 				console.error('Error updating document:', error);
 			}
 		} else {
-			console.error('No document ID found in metadata.');
+			console.error('No payload data recieved');
 		}
 	}
 

@@ -1,0 +1,14 @@
+[debug] [2024-07-21T13:54:52.212Z] ----------------------------------------------------------------------
+[debug] [2024-07-21T13:54:52.218Z] Command:       /opt/homebrew/Cellar/node/22.3.0/bin/node /opt/homebrew/bin/firebase deploy --only functions
+[debug] [2024-07-21T13:54:52.219Z] CLI Version:   13.13.3
+[debug] [2024-07-21T13:54:52.219Z] Platform:      darwin
+[debug] [2024-07-21T13:54:52.219Z] Node Version:  v22.3.0
+[debug] [2024-07-21T13:54:52.220Z] Time:          Sun Jul 21 2024 20:54:52 GMT+0700 (Indochina Time)
+[debug] [2024-07-21T13:54:52.220Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-21T13:54:52.302Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-21T13:54:52.303Z] > authorizing via signed-in user (pathonscript@gmail.com)
+[debug] [2024-07-21T13:54:52.303Z] [iam] checking project dollarydoodle-17566 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-07-21T13:54:52.305Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dollarydoodle-17566:testIamPermissions [none]
+[debug] [2024-07-21T13:54:52.305Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dollarydoodle-17566:testIamPermissions x-goog-quota-user=projects/dollarydoodle-17566
+[debug] [2024-07-21T13:54:52.305Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dollarydoodle-17566:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
