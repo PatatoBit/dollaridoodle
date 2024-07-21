@@ -8,7 +8,6 @@
  */
 
 import { onRequest } from 'firebase-functions/v2/https';
-import * as logger from 'firebase-functions/logger';
 import * as admin from 'firebase-admin';
 import Stripe from 'stripe';
 import { defineString } from 'firebase-functions/params';
@@ -17,11 +16,6 @@ import { defineString } from 'firebase-functions/params';
 // https://firebase.google.com/docs/functions/typescript
 
 admin.initializeApp();
-
-export const helloWorld = onRequest((request, response) => {
-	logger.info('Hello logs!', { structuredData: true });
-	response.send('Hello from Firebase!');
-});
 
 const stripeSecretKey = defineString('STRIPE_SECRET_KEY');
 const stripeWebhookSecret = defineString('STRIPE_PAYMENT_WEBHOOK_SECRET');
@@ -35,7 +29,11 @@ export const handleStripeWebhook = onRequest(
 		let event: Stripe.Event;
 
 		try {
-			event = stripe.webhooks.constructEvent(req.rawBody, sig, stripeWebhookSecret.value());
+			event = stripe.webhooks.constructEvent(
+				JSON.stringify(req.rawBody, null, 2),
+				sig,
+				stripeWebhookSecret.value()
+			);
 		} catch (err) {
 			console.error('⚠️ Webhook signature verification failed.', (err as Error).message);
 			res.status(400).send(`Webhook Error: ${(err as Error).message}`);
