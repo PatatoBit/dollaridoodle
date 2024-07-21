@@ -9,6 +9,14 @@ export const actions: Actions = {
 	checkout: async ({ request }) => {
 		let sessionUrl: string | null;
 
+		const formData = await request.formData();
+
+		const prompt: string = formData.get('prompt') as string;
+		const isPrivate: boolean = formData.get('private') == 'on';
+		const isExpress: boolean = formData.get('express') == 'on';
+
+		console.log(prompt, isPrivate, isExpress);
+
 		try {
 			const session = await stripe.checkout.sessions.create({
 				line_items: [
