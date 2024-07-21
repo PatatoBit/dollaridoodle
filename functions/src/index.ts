@@ -27,7 +27,7 @@ const stripeSecretKey = defineString('STRIPE_SECRET_KEY');
 const stripeWebhookSecret = defineString('STRIPE_PAYMENT_WEBHOOK_SECRET');
 
 export const handleStripeWebhook = onRequest(
-	{ secrets: [stripeSecretKey, stripeWebhookSecret] },
+	{ secrets: [stripeSecretKey.name, stripeWebhookSecret.name] },
 	async (req, res) => {
 		const stripe = new Stripe(stripeSecretKey.value());
 		const sig = req.headers['stripe-signature'] as string;
