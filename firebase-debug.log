@@ -203,3 +203,156 @@
 [debug] [2024-07-21T13:56:10.965Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570123456-61dc247aa1fdf-ab8fd0a3-ec8b3847 200
 [debug] [2024-07-21T13:56:10.965Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570123456-61dc247aa1fdf-ab8fd0a3-ec8b3847 {"name":"projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570123456-61dc247aa1fdf-ab8fd0a3-ec8b3847","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-07-21T13:55:24.298830862Z","target":"projects/dollarydoodle-17566/locations/us-central1/functions/helloWorld","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dollarydoodle-17566/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-862779424947-us-central1","object":"helloWorld/function-source.zip","generation":"1721570124211914"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-862779424947-us-central1","object":"helloWorld/function-source.zip","generation":"1721545144915018"}},"dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dollarydoodle-17566/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dollarydoodle-17566\",\"storageBucket\":\"dollarydoodle-17566.appspot.com\"}","GCLOUD_PROJECT":"dollarydoodle-17566","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dollarydoodle-17566/locations/us-central1/services/helloWorld","FUNCTION_TARGET":"helloWorld","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"862779424947-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"helloworld-00001-meb","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cloudfunctions","firebase-functions-hash":"24420e578b4ce31ee5cd7c2b5f78be2a50dc203c"},"environment":"GEN_2","url":"https://us-central1-dollarydoodle-17566.cloudfunctions.net/helloWorld"},"stages":[{"name":"BUILD","message":"Build finished","state":"COMPLETE","resource":"projects/862779424947/locations/us-central1/builds/772767e1-a9b6-492f-8440-ba0fa58162fa","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/772767e1-a9b6-492f-8440-ba0fa58162fa?project=862779424947"},{"name":"SERVICE","message":"Updating Cloud Run service","state":"IN_PROGRESS","resource":"projects/dollarydoodle-17566/locations/us-central1/services/helloworld","resourceUri":"https://console.cloud.google.com/run/detail/us-central1/helloworld?project=dollarydoodle-17566","stateMessages":[{"severity":"INFO","type":"CloudRunServiceNewRevisionTrafficInfo","message":"A new revision will be deployed serving with 100% traffic."}]}],"sourceToken":"Cldwcm9qZWN0cy84NjI3Nzk0MjQ5NDcvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy83NzI3NjdlMS1hOWI2LTQ5MmYtODQ0MC1iYTBmYTU4MTYyZmESUnVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L2RvbGxhcnlkb29kbGUtMTc1NjYvZ2NmLWFydGlmYWN0cy9oZWxsb193b3JsZDp2ZXJzaW9uXzEYs4GljY4ZIkdwcm9qZWN0cy9kb2xsYXJ5ZG9vZGxlLTE3NTY2L2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvaGVsbG9Xb3JsZCoMCO6m9LQGEOjr7LcDMghub2RlanMxODp2CiNnY3IuaW8vZ2FlLXJ1bnRpbWVzL25vZGVqczE4OnN0YWJsZRJPdXMtY2VudHJhbDEtZG9ja2VyLnBrZy5kZXYvc2VydmVybGVzcy1ydW50aW1lcy9nb29nbGUtMjItZnVsbC9ydW50aW1lcy9ub2RlanMxOEAB","operationType":"UPDATE_FUNCTION"},"done":false}
 [debug] [2024-07-21T13:56:10.965Z] Got source token Cldwcm9qZWN0cy84NjI3Nzk0MjQ5NDcvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy83NzI3NjdlMS1hOWI2LTQ5MmYtODQ0MC1iYTBmYTU4MTYyZmESUnVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L2RvbGxhcnlkb29kbGUtMTc1NjYvZ2NmLWFydGlmYWN0cy9oZWxsb193b3JsZDp2ZXJzaW9uXzEYs4GljY4ZIkdwcm9qZWN0cy9kb2xsYXJ5ZG9vZGxlLTE3NTY2L2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvaGVsbG9Xb3JsZCoMCO6m9LQGEOjr7LcDMghub2RlanMxODp2CiNnY3IuaW8vZ2FlLXJ1bnRpbWVzL25vZGVqczE4OnN0YWJsZRJPdXMtY2VudHJhbDEtZG9ja2VyLnBrZy5kZXYvc2VydmVybGVzcy1ydW50aW1lcy9nb29nbGUtMjItZnVsbC9ydW50aW1lcy9ub2RlanMxOEAB for region us-central1
+[debug] [2024-07-21T13:56:14.427Z] [update-default-us-central1-handleStripeWebhook] Retrying task index 0
+[debug] [2024-07-21T13:56:14.437Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570160802-61dc249e3fbeb-34e9972a-ba0eb69a [none]
+[debug] [2024-07-21T13:56:15.770Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570160802-61dc249e3fbeb-34e9972a-ba0eb69a 200
+[debug] [2024-07-21T13:56:15.770Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570160802-61dc249e3fbeb-34e9972a-ba0eb69a {"name":"projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570160802-61dc249e3fbeb-34e9972a-ba0eb69a","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-07-21T13:56:01.554634343Z","endTime":"2024-07-21T13:56:11.908088934Z","target":"projects/dollarydoodle-17566/locations/us-central1/functions/handleStripeWebhook","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dollarydoodle-17566/locations/us-central1/functions/handleStripeWebhook","buildConfig":{"runtime":"nodejs18","entryPoint":"handleStripeWebhook","source":{"storageSource":{"bucket":"gcf-v2-sources-862779424947-us-central1","object":"handleStripeWebhook/function-source.zip","generation":"1721570161505842"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-862779424947-us-central1","object":"handleStripeWebhook/function-source.zip","generation":"1721557507043851"}},"dockerRegistry":"ARTIFACT_REGISTRY","sourceToken":"Cldwcm9qZWN0cy84NjI3Nzk0MjQ5NDcvbG9jYXRpb25zL3VzLWNlbnRyYWwxL2J1aWxkcy83NzI3NjdlMS1hOWI2LTQ5MmYtODQ0MC1iYTBmYTU4MTYyZmESUnVzLWNlbnRyYWwxLWRvY2tlci5wa2cuZGV2L2RvbGxhcnlkb29kbGUtMTc1NjYvZ2NmLWFydGlmYWN0cy9oZWxsb193b3JsZDp2ZXJzaW9uXzEYs4GljY4ZIkdwcm9qZWN0cy9kb2xsYXJ5ZG9vZGxlLTE3NTY2L2xvY2F0aW9ucy91cy1jZW50cmFsMS9mdW5jdGlvbnMvaGVsbG9Xb3JsZCoMCO6m9LQGEOjr7LcDMghub2RlanMxODp2CiNnY3IuaW8vZ2FlLXJ1bnRpbWVzL25vZGVqczE4OnN0YWJsZRJPdXMtY2VudHJhbDEtZG9ja2VyLnBrZy5kZXYvc2VydmVybGVzcy1ydW50aW1lcy9nb29nbGUtMjItZnVsbC9ydW50aW1lcy9ub2RlanMxOEAB","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dollarydoodle-17566/locations/us-central1/services/handlestripewebhook","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dollarydoodle-17566\",\"storageBucket\":\"dollarydoodle-17566.appspot.com\"}","GCLOUD_PROJECT":"dollarydoodle-17566","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dollarydoodle-17566/locations/us-central1/services/handleStripeWebhook","FUNCTION_TARGET":"handleStripeWebhook","LOG_EXECUTION_ID":"true","FUNCTION_SIGNATURE_TYPE":"http"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"862779424947-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"handlestripewebhook-00001-mew","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cloudfunctions","firebase-functions-hash":"24420e578b4ce31ee5cd7c2b5f78be2a50dc203c"},"environment":"GEN_2","url":"https://us-central1-dollarydoodle-17566.cloudfunctions.net/handleStripeWebhook"},"stages":[{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Could not create or update Cloud Run service handlestripewebhook, Container Healthcheck failed. Revision 'handlestripewebhook-00002-kul' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/handlestripewebhook/revision_name/handlestripewebhook-00002-kul&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22handlestripewebhook%22%0Aresource.labels.revision_name%3D%22handlestripewebhook-00002-kul%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"}}
+[debug] [2024-07-21T13:56:15.771Z] Got source token undefined for region us-central1
+[error] Could not create or update Cloud Run service handlestripewebhook, Container Healthcheck failed. Revision 'handlestripewebhook-00002-kul' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/handlestripewebhook/revision_name/handlestripewebhook-00002-kul&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22handlestripewebhook%22%0Aresource.labels.revision_name%3D%22handlestripewebhook-00002-kul%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+[debug] [2024-07-21T13:56:20.979Z] [update-default-us-central1-helloWorld] Retrying task index 0
+[debug] [2024-07-21T13:56:20.989Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570123456-61dc247aa1fdf-ab8fd0a3-ec8b3847 [none]
+[debug] [2024-07-21T13:56:22.489Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570123456-61dc247aa1fdf-ab8fd0a3-ec8b3847 200
+[debug] [2024-07-21T13:56:22.489Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570123456-61dc247aa1fdf-ab8fd0a3-ec8b3847 {"name":"projects/dollarydoodle-17566/locations/us-central1/operations/operation-1721570123456-61dc247aa1fdf-ab8fd0a3-ec8b3847","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-07-21T13:55:24.298830862Z","endTime":"2024-07-21T13:56:11.341077718Z","target":"projects/dollarydoodle-17566/locations/us-central1/functions/helloWorld","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dollarydoodle-17566/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-862779424947-us-central1","object":"helloWorld/function-source.zip","generation":"1721570124211914"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-862779424947-us-central1","object":"helloWorld/function-source.zip","generation":"1721545144915018"}},"dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dollarydoodle-17566/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dollarydoodle-17566\",\"storageBucket\":\"dollarydoodle-17566.appspot.com\"}","GCLOUD_PROJECT":"dollarydoodle-17566","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dollarydoodle-17566/locations/us-central1/services/helloWorld","FUNCTION_TARGET":"helloWorld","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"862779424947-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"helloworld-00001-meb","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cloudfunctions","firebase-functions-hash":"24420e578b4ce31ee5cd7c2b5f78be2a50dc203c"},"environment":"GEN_2","url":"https://us-central1-dollarydoodle-17566.cloudfunctions.net/helloWorld"},"stages":[{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Could not create or update Cloud Run service helloworld, Container Healthcheck failed. Revision 'helloworld-00002-dur' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/helloworld/revision_name/helloworld-00002-dur&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22helloworld%22%0Aresource.labels.revision_name%3D%22helloworld-00002-dur%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"}}
+[debug] [2024-07-21T13:56:22.489Z] Got source token undefined for region us-central1
+[error] Could not create or update Cloud Run service helloworld, Container Healthcheck failed. Revision 'helloworld-00002-dur' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/helloworld/revision_name/helloworld-00002-dur&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22helloworld%22%0Aresource.labels.revision_name%3D%22helloworld-00002-dur%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+[debug] [2024-07-21T13:56:22.550Z] Total Function Deployment time: 60369
+[debug] [2024-07-21T13:56:22.550Z] 2 Functions Deployed
+[debug] [2024-07-21T13:56:22.550Z] 2 Functions Errored
+[debug] [2024-07-21T13:56:22.550Z] 0 Function Deployments Aborted
+[debug] [2024-07-21T13:56:22.550Z] Average Function Deployment time: 57007
+[info] 
+[info] Functions deploy had errors with the following functions:
+	handleStripeWebhook(us-central1)
+	helloWorld(us-central1)
+[debug] [2024-07-21T13:56:22.551Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2024-07-21T13:56:22.551Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2024-07-21T13:56:22.553Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts/packages/hello_world [none]
+[debug] [2024-07-21T13:56:22.553Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts/packages/handle_stripe_webhook [none]
+[debug] [2024-07-21T13:56:22.554Z] >>> [apiv2][query] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list [none]
+[debug] [2024-07-21T13:56:23.127Z] <<< [apiv2][status] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list 404
+[debug] [2024-07-21T13:56:23.127Z] <<< [apiv2][body] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-07-21T13:56:23.128Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-07-21T13:56:23.131Z] >>> [apiv2][query] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list [none]
+[debug] [2024-07-21T13:56:23.472Z] <<< [apiv2][status] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list 404
+[debug] [2024-07-21T13:56:23.473Z] <<< [apiv2][body] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-07-21T13:56:23.473Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-07-21T13:56:23.576Z] >>> [apiv2][query] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list [none]
+[debug] [2024-07-21T13:56:23.935Z] <<< [apiv2][status] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list 404
+[debug] [2024-07-21T13:56:23.935Z] <<< [apiv2][body] GET https://us.gcr.io/v2/dollarydoodle-17566/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-07-21T13:56:23.935Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-07-21T13:56:23.998Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts/packages/handle_stripe_webhook 404
+[debug] [2024-07-21T13:56:23.998Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts/packages/handle_stripe_webhook {"error":{"code":404,"message":"Package \"projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts/packages/handle_stripe_webhook\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-07-21T13:56:24.102Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts/packages/hello_world 200
+[debug] [2024-07-21T13:56:24.102Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/repositories/gcf-artifacts/packages/hello_world {"name":"projects/dollarydoodle-17566/locations/us-central1/operations/c4af312d-4585-43d9-a676-3c88cb007563","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"}}
+[debug] [2024-07-21T13:56:24.103Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/operations/c4af312d-4585-43d9-a676-3c88cb007563 [none]
+[debug] [2024-07-21T13:56:25.441Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/operations/c4af312d-4585-43d9-a676-3c88cb007563 200
+[debug] [2024-07-21T13:56:25.441Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1beta2/projects/dollarydoodle-17566/locations/us-central1/operations/c4af312d-4585-43d9-a676-3c88cb007563 {"name":"projects/dollarydoodle-17566/locations/us-central1/operations/c4af312d-4585-43d9-a676-3c88cb007563","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"},"done":true,"response":{"@type":"type.googleapis.com/google.protobuf.Empty"}}
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/dollarydoodle-17566/us/gcf 
+[debug] [2024-07-21T13:56:25.443Z] Functions deploy failed.
+[debug] [2024-07-21T13:56:25.443Z] {
+  "endpoint": {
+    "id": "handleStripeWebhook",
+    "project": "dollarydoodle-17566",
+    "region": "us-central1",
+    "entryPoint": "handleStripeWebhook",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"dollarydoodle-17566\",\"storageBucket\":\"dollarydoodle-17566.appspot.com\"}",
+      "GCLOUD_PROJECT": "dollarydoodle-17566",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/dollarydoodle-17566/locations/us-central1/services/handleStripeWebhook",
+      "FUNCTION_TARGET": "handleStripeWebhook",
+      "LOG_EXECUTION_ID": "true",
+      "FUNCTION_SIGNATURE_TYPE": "http"
+    },
+    "codebase": "default",
+    "runServiceId": "handlestripewebhook",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "24420e578b4ce31ee5cd7c2b5f78be2a50dc203c"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Could not create or update Cloud Run service handlestripewebhook, Container Healthcheck failed. Revision 'handlestripewebhook-00002-kul' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/handlestripewebhook/revision_name/handlestripewebhook-00002-kul&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22handlestripewebhook%22%0Aresource.labels.revision_name%3D%22handlestripewebhook-00002-kul%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+    "original": {
+      "code": 3,
+      "message": "Could not create or update Cloud Run service handlestripewebhook, Container Healthcheck failed. Revision 'handlestripewebhook-00002-kul' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/handlestripewebhook/revision_name/handlestripewebhook-00002-kul&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22handlestripewebhook%22%0Aresource.labels.revision_name%3D%22handlestripewebhook-00002-kul%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2024-07-21T13:56:25.443Z] {
+  "endpoint": {
+    "id": "helloWorld",
+    "project": "dollarydoodle-17566",
+    "region": "us-central1",
+    "entryPoint": "helloWorld",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"dollarydoodle-17566\",\"storageBucket\":\"dollarydoodle-17566.appspot.com\"}",
+      "GCLOUD_PROJECT": "dollarydoodle-17566",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/dollarydoodle-17566/locations/us-central1/services/helloWorld",
+      "FUNCTION_TARGET": "helloWorld",
+      "LOG_EXECUTION_ID": "true"
+    },
+    "codebase": "default",
+    "runServiceId": "helloworld",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "24420e578b4ce31ee5cd7c2b5f78be2a50dc203c"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Could not create or update Cloud Run service helloworld, Container Healthcheck failed. Revision 'helloworld-00002-dur' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/helloworld/revision_name/helloworld-00002-dur&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22helloworld%22%0Aresource.labels.revision_name%3D%22helloworld-00002-dur%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start",
+    "original": {
+      "code": 3,
+      "message": "Could not create or update Cloud Run service helloworld, Container Healthcheck failed. Revision 'helloworld-00002-dur' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.\n\nLogs URL: https://console.cloud.google.com/logs/viewer?project=dollarydoodle-17566&resource=cloud_run_revision/service_name/helloworld/revision_name/helloworld-00002-dur&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22helloworld%22%0Aresource.labels.revision_name%3D%22helloworld-00002-dur%22 \nFor more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[error] Error: There was an error deploying functions:
+[error] - Error Failed to update function handleStripeWebhook in region us-central1
+[error] - Error Failed to update function helloWorld in region us-central1
