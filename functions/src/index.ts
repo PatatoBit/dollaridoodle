@@ -24,7 +24,7 @@ export const helloWorld = onRequest((request, response) => {
 });
 
 export const handleStripeWebhook = onRequest(async (req, res) => {
-	const stripe = new Stripe(functions.config().stripe.secret);
+	const stripe = new Stripe(functions.config().stripe.secret_key);
 	const sig = req.headers['stripe-signature'] as string;
 
 	let event: Stripe.Event;
@@ -33,7 +33,7 @@ export const handleStripeWebhook = onRequest(async (req, res) => {
 		event = stripe.webhooks.constructEvent(
 			req.rawBody,
 			sig,
-			functions.config().stripe.webhook_secret
+			functions.config().stripe.payment_webhook_secret
 		);
 	} catch (err) {
 		console.error('⚠️ Webhook signature verification failed.', (err as Error).message);
