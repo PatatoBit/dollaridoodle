@@ -1,7 +1,11 @@
 import Stripe from 'stripe';
+import { collection } from 'firebase/firestore';
+
 import type { Actions } from './$types';
 import { STRIPE_SECRET_KEY } from '$env/static/private';
 import { error, redirect } from '@sveltejs/kit';
+
+import { db } from '$lib/firebase';
 
 const stripe = new Stripe(STRIPE_SECRET_KEY);
 
@@ -14,8 +18,9 @@ export const actions: Actions = {
 		const prompt: string = formData.get('prompt') as string;
 		const isPrivate: boolean = formData.get('private') == 'on';
 		const isExpress: boolean = formData.get('express') == 'on';
+		const requestCollection = collection(db, 'requests');
 
-		console.log(prompt, isPrivate, isExpress);
+		console.log(prompt, isPrivate, isExpress, requestCollection);
 
 		try {
 			const session = await stripe.checkout.sessions.create({
@@ -27,8 +32,8 @@ export const actions: Actions = {
 				],
 				mode: 'payment',
 				payment_method_types: ['card'],
-				success_url: `${request.headers.get('origin')}/?success`,
-				cancel_url: `${request.headers.get('origin')}/?cancelled`
+				success_url: `${request.headers.get('origin')}/app/?success`,
+				cancel_url: `${request.headers.get('origin')}/app/?cancelled`
 			});
 
 			sessionUrl = session.url;
