@@ -1,28 +1,17 @@
 # Todo
 
+## Priority
+- Payment confirmation after checkout completed
+- My end
+  - List of all requests by status
+  - Upload image and set status 
+
 ## General
-- Responsive to small screen size
 - Authentication
-  - Google
   - Discord
   - Facebook
 - Search bar search for matching doodles
-- Button send to payment
-  - Only if signed in
+- Extra image request upload
+- More Resolutions
 - Progress stats
 
-## Canvas
-- Zooming
-- Panning
-
-### User's end
-- Disable drawing on the canvas
-- Fill screen when hovered / clicked
-
-### My end
-- Saving data
-- Storing data to firebase
-
-- More controls
-  - Change color
-  - Change size (?)
