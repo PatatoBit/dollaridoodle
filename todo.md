@@ -3,7 +3,7 @@
 ## Priority
 - Payment confirmation after checkout completed
 - My end
-  - List of all requests by status
+  - List of all sorted requests separated by status
   - Upload image and set status 
 
 ## General
@@ -13,5 +13,7 @@
 - Search bar search for matching doodles
 - Extra image request upload
 - More Resolutions
-- Progress stats
-
+- Landing page
+  - Detailed description
+  - Progress stats
+  - Footer
