@@ -27,7 +27,7 @@
 	.page {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		gap: 2.5rem;
 	}
 
 	.container {
@@ -39,5 +39,11 @@
 
 		gap: 1rem;
 		text-align: center;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 0.3rem;
+		}
 	}
 </style>
