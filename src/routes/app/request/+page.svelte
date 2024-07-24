@@ -13,6 +13,7 @@
 		onSnapshot(docRef, (doc) => {
 			if (doc.exists()) {
 				data = doc.data() as RequestData;
+				console.table(data);
 			} else {
 				console.error('No such document!');
 			}
@@ -23,9 +24,22 @@
 <div class="page">
 	<div class="wrapper">
 		{#if idString}
-			<!-- content here -->
-			<p>id: {idString}</p>
-			<p>data: {JSON.stringify(data)}</p>
+			<div class="page">
+				<div class="wrapper">
+					{#if data}
+						<p class="label">Prompt</p>
+						<p>{data.prompt}</p>
+
+						<p class="label">Express</p>
+						<input type="checkbox" bind:checked={data.isExpress} disabled />
+
+						<p class="label">Private</p>
+						<input type="checkbox" bind:checked={data.isPrivate} disabled />
+					{:else}
+						<p>Loading...</p>
+					{/if}
+				</div>
+			</div>
 		{:else}
 			no id
 			<!-- else content here -->
