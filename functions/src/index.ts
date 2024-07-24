@@ -50,14 +50,13 @@ export const handleStripeWebhook = onRequest(async (req, res) => {
 
 		if (payloadData) {
 			try {
-				await admin
-					.firestore()
-					.collection('requests')
-					.add({
-						...payloadData,
-						status: 'PAID',
-						createdAt: admin.firestore.FieldValue.serverTimestamp()
-					});
+				await admin.firestore().collection('requests').doc(payloadData.id).set({
+					prompt: payloadData.prompt,
+					isPrivate: payloadData.isPrivate,
+					isExpress: payloadData.isExpress,
+					status: 'PAID',
+					createdAt: admin.firestore.FieldValue.serverTimestamp()
+				});
 			} catch (error) {
 				console.error('Error updating document:', error);
 			}
