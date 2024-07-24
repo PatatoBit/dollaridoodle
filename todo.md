@@ -1,7 +1,8 @@
 # Todo
 
 ## Priority
-- Payment confirmation after checkout completed
+- Storing userid and email after checkout completed
+- Order number and status
 - My end
   - List of all sorted requests separated by status
   - Upload image and set status 
