@@ -36,6 +36,17 @@ input {
 	border-bottom: 1px solid var(--text);
 }
 
+select {
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	background-color: transparent;
+
+	color: var(--text);
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+
 a {
 	all: unset;
 }

@@ -18,7 +18,11 @@
 							<p>Resolution</p>
 						</div>
 
-						<p>Small</p>
+						<select name="resolution">
+							<option value="small">small</option>
+							<option value="medium">Medium</option>
+							<option value="large">LARGE</option>
+						</select>
 					</div>
 
 					<div class="input">

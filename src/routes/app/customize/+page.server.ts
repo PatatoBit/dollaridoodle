@@ -9,6 +9,7 @@ const stripe = new Stripe(STRIPE_SECRET_KEY);
 
 interface RequestData {
 	prompt: string;
+	resolution: 'small' | 'medium' | 'large';
 	isPrivate: boolean;
 	isExpress: boolean;
 }
@@ -21,6 +22,7 @@ export const actions: Actions = {
 
 		const payloadData: RequestData = {
 			prompt: formData.get('prompt') as string,
+			resolution: formData.get('resolution') as RequestData['resolution'],
 			isPrivate: formData.get('private') == 'on',
 			isExpress: formData.get('express') == 'on'
 		};

@@ -22,6 +22,10 @@
 </script>
 
 <div class="page">
+	<div class="back-button">
+		<a href="/app"><button>Go back</button></a>
+	</div>
+
 	<div class="wrapper">
 		{#if idString}
 			{#if data}
@@ -62,6 +66,12 @@
 	.page {
 		display: flex;
 		align-items: center;
+	}
+
+	.back-button {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
 	}
 
 	.wrapper {

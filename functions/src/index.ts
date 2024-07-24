@@ -52,6 +52,7 @@ export const handleStripeWebhook = onRequest(async (req, res) => {
 			try {
 				await admin.firestore().collection('requests').doc(payloadData.id).set({
 					prompt: payloadData.prompt,
+					resolution: payloadData.resolution,
 					isPrivate: payloadData.isPrivate,
 					isExpress: payloadData.isExpress,
 					status: 'PAID',
