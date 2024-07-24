@@ -24,25 +24,73 @@
 <div class="page">
 	<div class="wrapper">
 		{#if idString}
-			<div class="page">
-				<div class="wrapper">
-					{#if data}
-						<p class="label">Prompt</p>
-						<p>{data.prompt}</p>
-
-						<p class="label">Express</p>
-						<input type="checkbox" bind:checked={data.isExpress} disabled />
-
-						<p class="label">Private</p>
-						<input type="checkbox" bind:checked={data.isPrivate} disabled />
-					{:else}
-						<p>Loading...</p>
-					{/if}
+			{#if data}
+				<div class="side">
+					<img class="doodle" src="/images/human.png" alt="Placeholder" />
 				</div>
-			</div>
+				<div class="side">
+					<div class="details">
+						<p class="label">Prompt</p>
+						<h2>{data.prompt}</h2>
+					</div>
+
+					<!-- <p class="label">Express</p>
+							<input type="checkbox" bind:checked={data.isExpress} disabled />
+	
+							<p class="label">Private</p>
+							<input type="checkbox" bind:checked={data.isPrivate} disabled /> -->
+				</div>
+			{:else}
+				<p>Loading...</p>
+			{/if}
 		{:else}
 			no id
 			<!-- else content here -->
 		{/if}
 	</div>
 </div>
+
+<style lang="scss">
+	.doodle {
+		width: 20rem;
+		aspect-ratio: 1;
+		object-fit: contain;
+
+		border: 1px solid var(--primary);
+	}
+
+	.page {
+		display: flex;
+		align-items: center;
+	}
+
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		gap: 2rem;
+	}
+
+	.side {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.wrapper {
+			flex-direction: column;
+		}
+
+		.side {
+			align-items: center;
+		}
+	}
+</style>
