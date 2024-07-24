@@ -36,7 +36,7 @@
 		{#if idString}
 			{#if data}
 				<div class="side">
-					<img class="doodle" src="/images/human.png" alt="Placeholder" />
+					<img class="doodle" src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
 
 					<div>
 						<p class="label">Resolution</p>
@@ -70,8 +70,6 @@
 		width: 20rem;
 		aspect-ratio: 1;
 		object-fit: contain;
-
-		border: 1px solid var(--primary);
 	}
 
 	.page {
