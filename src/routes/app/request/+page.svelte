@@ -9,6 +9,12 @@
 
 	let data: RequestData;
 
+	enum Resolution {
+		small = 'small',
+		medium = 'Medium',
+		large = 'LARGE'
+	}
+
 	if (docRef) {
 		onSnapshot(docRef, (doc) => {
 			if (doc.exists()) {
@@ -31,6 +37,11 @@
 			{#if data}
 				<div class="side">
 					<img class="doodle" src="/images/human.png" alt="Placeholder" />
+
+					<div>
+						<p class="label">Resolution</p>
+						<h3>{Resolution[data.resolution]}</h3>
+					</div>
 				</div>
 				<div class="side">
 					<div class="details">
@@ -86,6 +97,7 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.details {
