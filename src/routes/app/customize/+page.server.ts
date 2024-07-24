@@ -14,6 +14,12 @@ interface RequestData {
 	isExpress: boolean;
 }
 
+enum ProductId {
+	small = 'price_1PedNuJIiOwtKCnppUppAMtk',
+	medium = 'price_1Pg6PxJIiOwtKCnp27VyMcy1',
+	large = 'price_1Pg6QSJIiOwtKCnpaF0G7Sh5'
+}
+
 export const actions: Actions = {
 	checkout: async ({ request }) => {
 		let sessionUrl: string | null;
@@ -33,7 +39,7 @@ export const actions: Actions = {
 			const session = await stripe.checkout.sessions.create({
 				line_items: [
 					{
-						price: 'price_1PedNuJIiOwtKCnppUppAMtk',
+						price: ProductId[payloadData.resolution],
 						quantity: 1
 					}
 				],
