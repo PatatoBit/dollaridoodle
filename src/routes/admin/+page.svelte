@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { db } from '$lib/firebase';
+	import { formatDistance } from 'date-fns';
 	import { collection, orderBy, query, where } from 'firebase/firestore';
 	import { collectionStore } from 'sveltefire';
 
@@ -35,21 +36,31 @@
 			</div>
 		</div>
 
-		<div>
-			<h2>Paid</h2>
+		<h2>Paid</h2>
+		<div class="requests">
 			{#each $paidRequests as paidRequest}
-				<div class="request">
+				<a class="request" href={`/app/request/?id=${paidRequest.id}`}>
 					<h4>
 						{paidRequest.prompt}
 					</h4>
-				</div>
+
+					<p>{formatDistance(paidRequest.createdAt.toDate(), new Date(), { addSuffix: true })}</p>
+				</a>
 			{/each}
 		</div>
 
-		<div>
-			<h2>Completed</h2>
+		<h2>Completed</h2>
+		<div class="requests">
 			{#each $completedRequests as completedRequest}
-				{completedRequest}
+				<a class="request" href={`/app/request/?id=${completedRequest.id}`}>
+					<h4>
+						{completedRequest.prompt}
+					</h4>
+
+					<p>
+						{formatDistance(completedRequest.createdAt.toDate(), new Date(), { addSuffix: true })}
+					</p>
+				</a>
 			{/each}
 		</div>
 	</div>
@@ -57,7 +68,7 @@
 
 <style lang="scss">
 	.wrapper {
-		gap: 2rem;
+		gap: 1.5rem;
 		align-items: baseline;
 	}
 
@@ -76,9 +87,23 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 0.3rem;
 
 		color: var(--background);
 		background-color: var(--primary);
+	}
+
+	.requests {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.request {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		padding: 0.5rem 0;
+
+		justify-content: space-between;
 	}
 </style>
