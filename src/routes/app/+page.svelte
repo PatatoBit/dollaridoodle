@@ -13,6 +13,8 @@
 				</button>
 			</form>
 
+			<br />
+
 			<button on:click={() => SignOut(auth)}>Sign out</button>
 		</SignedIn>
 	</div>
