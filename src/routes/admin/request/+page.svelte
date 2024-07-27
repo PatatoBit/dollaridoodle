@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { RequestData } from '$lib';
+	import type { AdminData, RequestData } from '$lib';
 	import { db } from '$lib/firebase';
 	import { doc, onSnapshot } from 'firebase/firestore';
 
 	const idString = $page.url.searchParams.get('id');
 	const docRef = idString ? doc(db, 'requests', idString) : null;
 
-	let data: RequestData;
+	let data: AdminData;
 
 	enum Resolution {
 		small = 'small',
@@ -18,7 +18,7 @@
 	if (docRef) {
 		onSnapshot(docRef, (doc) => {
 			if (doc.exists()) {
-				data = doc.data() as RequestData;
+				data = doc.data() as AdminData;
 				console.table(data);
 			} else {
 				console.error('No such document!');
@@ -37,6 +37,16 @@
 			{#if data}
 				<div class="side">
 					<img class="doodle" src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
+
+					<div class="details">
+						<p class="label">Status</p>
+
+						<select name="resolution">
+							<option value="small" selected={data.status == 'PAID'}>PAID</option>
+							<option value="small" selected={data.status == 'DOING'}>DOING</option>
+							<option value="small" selected={data.status == 'COMPLETED'}>COMPLETED</option>
+						</select>
+					</div>
 				</div>
 				<div class="side">
 					<div class="details">

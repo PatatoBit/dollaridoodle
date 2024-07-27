@@ -55,7 +55,7 @@
 			<p class="label">Completed</p>
 			<div class="requests">
 				{#each $completedRequests as completedRequest}
-					<a class="request" href={`/app/request/?id=${completedRequest.id}`}>
+					<a class="request" href={`/admin/request/?id=${completedRequest.id}`}>
 						<p>
 							{completedRequest.prompt}
 						</p>

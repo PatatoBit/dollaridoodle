@@ -8,3 +8,14 @@ export interface RequestData {
 	ownerId: string;
 	ownerEmail: string;
 }
+
+export interface AdminData {
+	prompt: string;
+	resolution: 'small' | 'medium' | 'large';
+	isPrivate: boolean;
+	isExpress: boolean;
+	ownerName: string;
+	ownerId: string;
+	ownerEmail: string;
+	status: 'PAID' | 'DOING' | 'COMPLETED';
+}
