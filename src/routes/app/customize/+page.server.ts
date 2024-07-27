@@ -4,15 +4,9 @@ import { error, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { STRIPE_SECRET_KEY } from '$env/static/private';
 import { v4 as uuidv4 } from 'uuid';
+import type { RequestData } from '$lib';
 
 const stripe = new Stripe(STRIPE_SECRET_KEY);
-
-interface RequestData {
-	prompt: string;
-	resolution: 'small' | 'medium' | 'large';
-	isPrivate: boolean;
-	isExpress: boolean;
-}
 
 enum ProductId {
 	small = 'price_1PedNuJIiOwtKCnppUppAMtk',
@@ -30,7 +24,10 @@ export const actions: Actions = {
 			prompt: formData.get('prompt') as string,
 			resolution: formData.get('resolution') as RequestData['resolution'],
 			isPrivate: formData.get('private') == 'on',
-			isExpress: formData.get('express') == 'on'
+			isExpress: formData.get('express') == 'on',
+			ownerName: formData.get('ownerName') as string,
+			ownerId: formData.get('ownerId') as string,
+			ownerEmail: formData.get('ownerEmail') as string
 		};
 
 		try {

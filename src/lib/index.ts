@@ -4,4 +4,7 @@ export interface RequestData {
 	resolution: 'small' | 'medium' | 'large';
 	isPrivate: boolean;
 	isExpress: boolean;
+	ownerName: string;
+	ownerId: string;
+	ownerEmail: string;
 }

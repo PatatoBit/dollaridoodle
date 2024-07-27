@@ -1,6 +1,11 @@
 <script lang="ts">
+	import { auth } from '$lib/firebase';
+	import { userStore } from 'sveltefire';
+
 	const urlParams = new URLSearchParams(window.location.search);
 	let prompt: string = urlParams.get('prompt') || '';
+
+	const user = userStore(auth);
 </script>
 
 <div class="page">
@@ -11,6 +16,10 @@
 					<p class="label">Your prompt</p>
 					<input type="text" name="prompt" bind:value={prompt} required />
 				</div>
+
+				<input name="ownerName" type="hidden" value={$user?.displayName} />
+				<input name="ownerId" type="hidden" value={$user?.email} />
+				<input name="ownerEmail" type="hidden" value={$user?.uid} />
 
 				<div class="inputs">
 					<div class="input">
