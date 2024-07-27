@@ -69,6 +69,7 @@
 <style lang="scss">
 	.wrapper {
 		gap: 1.5rem;
+		padding-top: 2rem;
 		align-items: baseline;
 	}
 
@@ -88,8 +89,8 @@
 		flex-direction: row;
 		justify-content: space-between;
 
-		color: var(--background);
-		background-color: var(--primary);
+		color: var(--primary);
+		border: 1px solid var(--primary);
 	}
 
 	.requests {
