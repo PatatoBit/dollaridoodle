@@ -49,11 +49,11 @@
 						<h2>{data.prompt}</h2>
 					</div>
 
-					<!-- <p class="label">Express</p>
-							<input type="checkbox" bind:checked={data.isExpress} disabled />
-	
-							<p class="label">Private</p>
-							<input type="checkbox" bind:checked={data.isPrivate} disabled /> -->
+					<div class="details">
+						<p class="label">Requested by</p>
+						<h3>{data.ownerName}</h3>
+						<h4>{data.ownerEmail}</h4>
+					</div>
 				</div>
 			{:else}
 				<p>Loading...</p>

@@ -18,8 +18,8 @@
 				</div>
 
 				<input name="ownerName" type="hidden" value={$user?.displayName} />
-				<input name="ownerId" type="hidden" value={$user?.email} />
-				<input name="ownerEmail" type="hidden" value={$user?.uid} />
+				<input name="ownerId" type="hidden" value={$user?.uid} />
+				<input name="ownerEmail" type="hidden" value={$user?.email} />
 
 				<div class="inputs">
 					<div class="input">
