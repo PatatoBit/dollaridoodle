@@ -21,56 +21,67 @@
 	<div class="wrapper">
 		<div class="stats">
 			<div class="stat">
-				<h4>9</h4>
+				<h4>{$paidRequests.length}</h4>
 				<p>waiting</p>
 			</div>
 
 			<div class="stat">
-				<h4>3</h4>
+				<h4>{$completedRequests.length}</h4>
 				<p>done</p>
 			</div>
 
 			<div class="stat">
-				<h4>12</h4>
-				<p>requests</p>
+				<h4>{$paidRequests.length + $completedRequests.length}</h4>
+				<p>total</p>
 			</div>
 		</div>
 
-		<h2>Paid</h2>
-		<div class="requests">
-			{#each $paidRequests as paidRequest}
-				<a class="request" href={`/app/request/?id=${paidRequest.id}`}>
-					<h4>
-						{paidRequest.prompt}
-					</h4>
+		<div class="list">
+			<p class="label">Paid</p>
+			<div class="requests">
+				{#each $paidRequests as paidRequest}
+					<a class="request" href={`/admin/request/?id=${paidRequest.id}`}>
+						<p>
+							{paidRequest.prompt}
+						</p>
 
-					<p>{formatDistance(paidRequest.createdAt.toDate(), new Date(), { addSuffix: true })}</p>
-				</a>
-			{/each}
+						<p>{formatDistance(paidRequest.createdAt.toDate(), new Date(), { addSuffix: true })}</p>
+					</a>
+				{/each}
+			</div>
 		</div>
 
-		<h2>Completed</h2>
-		<div class="requests">
-			{#each $completedRequests as completedRequest}
-				<a class="request" href={`/app/request/?id=${completedRequest.id}`}>
-					<h4>
-						{completedRequest.prompt}
-					</h4>
+		<div class="list">
+			<p class="label">Completed</p>
+			<div class="requests">
+				{#each $completedRequests as completedRequest}
+					<a class="request" href={`/app/request/?id=${completedRequest.id}`}>
+						<p>
+							{completedRequest.prompt}
+						</p>
 
-					<p>
-						{formatDistance(completedRequest.createdAt.toDate(), new Date(), { addSuffix: true })}
-					</p>
-				</a>
-			{/each}
+						<p>
+							{formatDistance(completedRequest.createdAt.toDate(), new Date(), { addSuffix: true })}
+						</p>
+					</a>
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>
 
 <style lang="scss">
 	.wrapper {
-		gap: 1.5rem;
+		gap: 2rem;
 		padding-top: 2rem;
 		align-items: baseline;
+	}
+
+	.list {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.stats {
@@ -83,11 +94,12 @@
 	.stat {
 		padding: 1rem 1.5rem;
 		border-radius: 0.2rem;
-		width: 6rem;
+		width: 3rem;
 
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
 		color: var(--primary);
 		border: 1px solid var(--primary);
@@ -106,5 +118,13 @@
 		padding: 0.5rem 0;
 
 		justify-content: space-between;
+		border-radius: 0.2rem;
+		transition: all 0.2s;
+
+		&:hover {
+			background-color: var(--primary);
+			color: var(--background);
+			padding: 0.5rem;
+		}
 	}
 </style>
