@@ -1,13 +1,14 @@
-# Todo
+# todo
 
-## Priority
-- Storing userid and email after checkout completed
-- Order number and status
-- My end
-  - List of all sorted requests separated by status
-  - Upload image and set status 
+- Admin requests list
+- Completing a doodle
+  - Update status
+  - Upload file and store link
+- Displaying file storage link in request page
+- Storing user id / email as owner
 
-## General
+## general
+
 - Authentication
   - Discord
   - Facebook
