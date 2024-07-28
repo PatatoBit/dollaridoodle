@@ -42,7 +42,7 @@ export const actions: Actions = {
 				],
 				mode: 'payment',
 				payment_method_types: ['card'],
-				success_url: `${request.headers.get('origin')}/app/request/?id=${uniqueId}`,
+				success_url: `${request.headers.get('origin')}/app/request/?id=${uniqueId}&success=true`,
 				cancel_url: `${request.headers.get('origin')}/app/?cancelled`,
 				metadata: {
 					payloadData: JSON.stringify({

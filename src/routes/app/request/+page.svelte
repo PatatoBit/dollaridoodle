@@ -5,6 +5,7 @@
 	import { doc, onSnapshot } from 'firebase/firestore';
 
 	const idString = $page.url.searchParams.get('id');
+	const success = $page.url.searchParams.get('success');
 	const docRef = idString ? doc(db, 'requests', idString) : null;
 
 	let data: RequestData;
@@ -43,6 +44,11 @@
 					{/if}
 				</div>
 				<div class="side">
+					{#if success}
+						<p>Thank you!</p>
+						<!-- content here -->
+					{/if}
+
 					<div class="details">
 						<p class="label">Prompt</p>
 						<h1>{data.prompt}</h1>

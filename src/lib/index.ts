@@ -9,7 +9,7 @@ export interface RequestData {
 	ownerEmail: string;
 
 	imageUrl?: string;
-	status: 'PAID' | 'DOING' | 'COMPLETED';
+	status?: 'PAID' | 'DOING' | 'COMPLETED';
 }
 
 export interface AdminData {
