@@ -90,8 +90,19 @@ button,
 	min-height: 80vh;
 }
 
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 90vh;
+	width: 100%;
+}
+
 .wrapper {
 	max-width: 55rem;
+	min-height: 100%;
 	margin-inline: auto;
 	padding-inline: 1rem;
 
