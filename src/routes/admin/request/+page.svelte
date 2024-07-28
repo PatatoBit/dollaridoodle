@@ -21,7 +21,6 @@
 		onSnapshot(docRef, (doc) => {
 			if (doc.exists()) {
 				data = doc.data() as AdminData;
-				console.log(data);
 			} else {
 				console.error('No such document!');
 			}
@@ -39,8 +38,22 @@
 			const url = await UploadFile(file, uploadPath);
 			imageUrl = await GetFile(url);
 
-			const docRef = doc(db, 'requests', idString);
-			await setDoc(docRef, { imageUrl }, { merge: true });
+			if (docRef) {
+				await setDoc(docRef, { imageUrl }, { merge: true });
+			} else {
+				console.error('No document reference');
+			}
+		}
+	};
+
+	// Status upadating
+	let statusSelected: AdminData['status'];
+
+	const handleStatusChange = async () => {
+		if (docRef) {
+			await setDoc(docRef, { status: statusSelected }, { merge: true });
+		} else {
+			console.error('No document reference');
 		}
 	};
 </script>
@@ -70,10 +83,10 @@
 					<div class="details">
 						<p class="label">Status</p>
 
-						<select name="resolution">
-							<option value="small" selected={data.status == 'PAID'}>PAID</option>
-							<option value="small" selected={data.status == 'DOING'}>DOING</option>
-							<option value="small" selected={data.status == 'COMPLETED'}>COMPLETED</option>
+						<select bind:value={statusSelected} on:change={handleStatusChange}>
+							<option value="PAID" selected={data.status == 'PAID'}>PAID</option>
+							<option value="DOING" selected={data.status == 'DOING'}>DOING</option>
+							<option value="COMPLETED" selected={data.status == 'COMPLETED'}>COMPLETED</option>
 						</select>
 					</div>
 				</div>
