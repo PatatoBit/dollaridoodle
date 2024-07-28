@@ -10,6 +10,7 @@ export interface RequestData {
 }
 
 export interface AdminData {
+	id: string;
 	prompt: string;
 	resolution: 'small' | 'medium' | 'large';
 	isPrivate: boolean;

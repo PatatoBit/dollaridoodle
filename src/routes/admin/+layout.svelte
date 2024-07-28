@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SignedIn, SignedOut } from 'sveltefire';
-	import { SignInWithGoogle } from '$lib/auth';
+	import { SignInWithGoogle } from '$lib/utils';
 </script>
 
 <SignedIn>

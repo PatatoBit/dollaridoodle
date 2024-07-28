@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SignOut } from '$lib/auth';
+	import { SignOut } from '$lib/utils';
 	import { SignedIn } from 'sveltefire';
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SignInWithGoogle } from '$lib/auth';
+	import { SignInWithGoogle } from '$lib/utils';
 	import Login from '$lib/components/Login.svelte';
 	import { SignedIn, SignedOut } from 'sveltefire';
 </script>

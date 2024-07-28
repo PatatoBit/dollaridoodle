@@ -2,10 +2,14 @@
 	import { page } from '$app/stores';
 	import type { AdminData, RequestData } from '$lib';
 	import { db } from '$lib/firebase';
+	import { UploadFile } from '$lib/utils';
 	import { doc, onSnapshot } from 'firebase/firestore';
 
 	const idString = $page.url.searchParams.get('id');
 	const docRef = idString ? doc(db, 'requests', idString) : null;
+
+	let inputRef: HTMLInputElement;
+	let imageUrl: string;
 
 	let data: AdminData;
 
@@ -25,6 +29,25 @@
 			}
 		});
 	}
+
+	const UploadChange = async () => {
+		const file = inputRef.files?.[0];
+		if (file) {
+			const filePath = `requests/${idString}/${file.name.split('.').slice(0, -1).join('.')}`;
+			await UploadFile(file, filePath);
+			console.log('File uploaded to: ', imageUrl);
+		}
+	};
+
+	let files: FileList | undefined;
+
+	$: if (files) {
+		console.log(files);
+
+		for (const file of files) {
+			console.log(`${file.name}: ${file.size} bytes`);
+		}
+	}
 </script>
 
 <div class="page">
@@ -36,7 +59,13 @@
 		{#if idString}
 			{#if data}
 				<div class="side">
-					<img class="doodle" src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
+					<div class="doodle">
+						{#if data.status == 'COMPLETED'}
+							<img src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
+						{:else}
+							<input type="file" bind:files accept="image/png, image/jpeg" />
+						{/if}
+					</div>
 
 					<div class="details">
 						<p class="label">Status</p>
@@ -87,9 +116,16 @@
 
 <style lang="scss">
 	.doodle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		width: 20rem;
 		aspect-ratio: 1;
 		object-fit: contain;
+
+		border: 2px solid var(--text);
+		border-radius: 0.3rem;
 	}
 
 	.page {
