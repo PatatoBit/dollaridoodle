@@ -2,13 +2,12 @@
 	import { page } from '$app/stores';
 	import type { AdminData, RequestData } from '$lib';
 	import { db } from '$lib/firebase';
-	import { UploadFile } from '$lib/utils';
+	import { GetFile, UploadFile } from '$lib/utils';
 	import { doc, onSnapshot } from 'firebase/firestore';
 
 	const idString = $page.url.searchParams.get('id');
 	const docRef = idString ? doc(db, 'requests', idString) : null;
 
-	let inputRef: HTMLInputElement;
 	let imageUrl: string;
 
 	let data: AdminData;
@@ -30,24 +29,18 @@
 		});
 	}
 
-	const UploadChange = async () => {
-		const file = inputRef.files?.[0];
+	// Image upload
+	let files: FileList;
+
+	const handleUpload = async (e: Event) => {
+		e.preventDefault();
+		const file = files[0];
 		if (file) {
-			const filePath = `requests/${idString}/${file.name.split('.').slice(0, -1).join('.')}`;
-			await UploadFile(file, filePath);
-			console.log('File uploaded to: ', imageUrl);
+			const uploadPath = `requests/${idString}.${file.type.split('/')[1]}`;
+			const url = await UploadFile(file, uploadPath);
+			imageUrl = await GetFile(url);
 		}
 	};
-
-	let files: FileList | undefined;
-
-	$: if (files) {
-		console.log(files);
-
-		for (const file of files) {
-			console.log(`${file.name}: ${file.size} bytes`);
-		}
-	}
 </script>
 
 <div class="page">
@@ -63,7 +56,16 @@
 						{#if data.status == 'COMPLETED'}
 							<img src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
 						{:else}
-							<input type="file" bind:files accept="image/png, image/jpeg" />
+							<input
+								type="file"
+								accept="image/png, image/jpeg"
+								bind:files
+								on:change={handleUpload}
+							/>
+
+							{#if imageUrl}
+								<img src={imageUrl} alt="Requested doodle" />
+							{/if}
 						{/if}
 					</div>
 

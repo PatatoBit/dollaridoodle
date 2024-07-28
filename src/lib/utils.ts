@@ -11,14 +11,17 @@ export const SignOut = (auth: Auth) => {
 	return signOut(auth);
 };
 
-export const UploadFile = async (file: File, path: string) => {
+export const UploadFile = async (file: File, path: string): Promise<string> => {
 	const storageRef = ref(storage, path);
+	let fullPath = '';
 	await uploadBytes(storageRef, file).then((res) => {
-		return res.metadata;
+		fullPath = res.metadata.fullPath;
 	});
+
+	return fullPath;
 };
 
-export const GetFile = async (path: string) => {
+export const GetFile = async (path: string): Promise<string> => {
 	const fileRef = ref(storage, path);
 	return await getDownloadURL(fileRef);
 };
