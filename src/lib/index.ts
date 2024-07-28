@@ -7,6 +7,9 @@ export interface RequestData {
 	ownerName: string;
 	ownerId: string;
 	ownerEmail: string;
+
+	imageUrl?: string;
+	status: 'PAID' | 'DOING' | 'COMPLETED';
 }
 
 export interface AdminData {

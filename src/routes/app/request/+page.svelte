@@ -36,7 +36,11 @@
 		{#if idString}
 			{#if data}
 				<div class="side">
-					<img class="doodle" src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
+					{#if data.imageUrl}
+						<img class="doodle" src={data.imageUrl} alt="Doodle" />
+					{:else}
+						<img class="doodle" src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
+					{/if}
 				</div>
 				<div class="side">
 					<div class="details">
