@@ -1,11 +1,6 @@
 # todo
-
-- Admin requests list
-- Completing a doodle
-  - Update status
-  - Upload file and store link
-- Displaying file storage link in request page
-- Storing user id / email as owner
+- Update customize page to display prices
+- Update resolutions to details
 
 ## general
 
@@ -19,3 +14,4 @@
   - Detailed description
   - Progress stats
   - Footer
+- Monthly subscription like [Designjoy](https://designjoy.co)
