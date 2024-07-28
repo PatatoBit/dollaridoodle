@@ -8,6 +8,7 @@
 	const publicDoodlesQuery = query(
 		requestsRef,
 		where('isPrivate', '==', false),
+		where('status', '==', 'COMPLETED'),
 		orderBy('status', 'asc')
 	);
 
@@ -38,13 +39,15 @@
 		{#each $publicDoodles as publicDoodle}
 			<div class="doodle">
 				{#if publicDoodle.status === 'COMPLETED'}
-					<img src={publicDoodle.imageUrl} alt="Doodle" />
+					<a href={`/app/request/?id=${publicDoodle.id}`}>
+						<img src={publicDoodle.imageUrl} alt="Doodle" />
+					</a>
 				{:else}
 					<div class="pending">
 						<p>Pending</p>
 					</div>
 				{/if}
-				<h3>{publicDoodle.prompt}</h3>
+				<p class="label">{publicDoodle.prompt}</p>
 			</div>
 		{/each}
 	</div>
@@ -84,17 +87,28 @@
 	}
 
 	.doodles {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-		grid-gap: 10px;
+		columns: 3;
+		column-gap: 1rem;
+		break-inside: avoid;
 
 		.doodle {
 			grid-row-end: span 10;
 			margin-bottom: 10px;
 
+			.label {
+				text-align: center;
+			}
+
 			img {
 				max-width: 100%;
+				border-radius: 0.5rem;
 			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		.doodles {
+			columns: 2;
 		}
 	}
 </style>
