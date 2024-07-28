@@ -4,18 +4,21 @@
 
 <main class="page">
 	<div class="wrapper">
-		<div class="landing">
+		<div class="center">
 			<h1 class="hero">Generate your art</h1>
 			<h1 class="hero">
 				with a
 				<img class="human invert" src="/images/human.png" alt="human" />
 			</h1>
 
+			<br />
+
 			<p class="label">image generation with human touch</p>
 
 			<br />
+			<br />
 
-			<a href="/app"> <button>let's go</button></a>
+			<a href="/app"> <button>start generating</button></a>
 			<div></div>
 		</div>
 	</div>
