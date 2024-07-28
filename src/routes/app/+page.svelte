@@ -1,10 +1,21 @@
 <script lang="ts">
+	import { db } from '$lib/firebase';
 	import { SignOut } from '$lib/utils';
-	import { SignedIn } from 'sveltefire';
+	import { collection, orderBy, query, where } from 'firebase/firestore';
+	import { collectionStore, SignedIn } from 'sveltefire';
+
+	const requestsRef = collection(db, 'requests');
+	const publicDoodlesQuery = query(
+		requestsRef,
+		where('isPrivate', '==', false),
+		orderBy('status', 'asc')
+	);
+
+	const publicDoodles = collectionStore(db, publicDoodlesQuery);
 </script>
 
 <main class="page">
-	<div class="wrapper">
+	<div class="center">
 		<SignedIn let:auth>
 			<form class="input-bar" action="app/customize">
 				<input type="text" placeholder="Some funny cats.." name="prompt" required />
@@ -20,6 +31,25 @@
 	</div>
 </main>
 
+<article class="wrapper">
+	<h2>Explore doodles</h2>
+
+	<div class="doodles">
+		{#each $publicDoodles as publicDoodle}
+			<div class="doodle">
+				{#if publicDoodle.status === 'COMPLETED'}
+					<img src={publicDoodle.imageUrl} alt="Doodle" />
+				{:else}
+					<div class="pending">
+						<p>Pending</p>
+					</div>
+				{/if}
+				<h3>{publicDoodle.prompt}</h3>
+			</div>
+		{/each}
+	</div>
+</article>
+
 <style lang="scss">
 	.input-bar {
 		display: flex;
@@ -33,16 +63,38 @@
 		}
 	}
 
+	.pending {
+		padding: 2rem;
+		border: 1px solid var(--primary);
+	}
+
 	.page {
 		display: flex;
 		align-items: center;
 	}
 
-	.wrapper {
+	.center {
+		max-width: 55rem;
+		min-height: 100%;
+		margin-inline: auto;
+		padding-inline: 1rem;
+
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
+	}
+
+	.doodles {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		grid-gap: 10px;
+
+		.doodle {
+			grid-row-end: span 10;
+			margin-bottom: 10px;
+
+			img {
+				max-width: 100%;
+			}
+		}
 	}
 </style>

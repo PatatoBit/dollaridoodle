@@ -72,15 +72,6 @@
 		margin-left: 0.7rem;
 	}
 
-	.landing {
-		width: 100%;
-		padding-top: 7rem;
-
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
 	.abouts {
 		width: 100%;
 		display: flex;
