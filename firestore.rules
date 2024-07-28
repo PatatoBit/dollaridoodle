@@ -12,17 +12,16 @@ service cloud.firestore {
     // Make sure to write security rules for your app before that time, or else
     // all client requests to your Firestore database will be denied until you Update
     // your rules
-    match /{document=**} {
-      allow read, write: if request.auth.uid != null;
+    match /requests/{document=**} {
+      allow read;
+      allow write: if isAdmin();
     }
 
-    match /orders/{documentId} {
-      allow update: if exists(/databases/$(database)/documents/$(collection)/$(documentId)) &&
-      request.resource.id == resource.id;
-      allow create: if false;  // Block creation
-      allow delete: if false;  // Block deletion
-      allow read: if true;     // Allow read access (modify as needed)
+    function isAdmin() {
+      return request.auth.uid == "PEYNjKn9QDNcmNSmiEY8ox6R1CP2";
     }
+
   }
+
 
 }
