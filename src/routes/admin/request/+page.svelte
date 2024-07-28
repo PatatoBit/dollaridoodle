@@ -3,7 +3,7 @@
 	import type { AdminData, RequestData } from '$lib';
 	import { db } from '$lib/firebase';
 	import { GetFile, UploadFile } from '$lib/utils';
-	import { doc, onSnapshot } from 'firebase/firestore';
+	import { doc, onSnapshot, setDoc } from 'firebase/firestore';
 
 	const idString = $page.url.searchParams.get('id');
 	const docRef = idString ? doc(db, 'requests', idString) : null;
@@ -17,12 +17,11 @@
 		medium = 'Medium',
 		large = 'LARGE'
 	}
-
 	if (docRef) {
 		onSnapshot(docRef, (doc) => {
 			if (doc.exists()) {
 				data = doc.data() as AdminData;
-				console.table(data);
+				console.log(data);
 			} else {
 				console.error('No such document!');
 			}
@@ -35,17 +34,20 @@
 	const handleUpload = async (e: Event) => {
 		e.preventDefault();
 		const file = files[0];
-		if (file) {
+		if (file && idString) {
 			const uploadPath = `requests/${idString}.${file.type.split('/')[1]}`;
 			const url = await UploadFile(file, uploadPath);
 			imageUrl = await GetFile(url);
+
+			const docRef = doc(db, 'requests', idString);
+			await setDoc(docRef, { imageUrl }, { merge: true });
 		}
 	};
 </script>
 
 <div class="page">
 	<div class="back-button">
-		<a href="/app"><button>Go back</button></a>
+		<a href="/admin"><button>Go back</button></a>
 	</div>
 
 	<div class="wrapper">
@@ -53,8 +55,8 @@
 			{#if data}
 				<div class="side">
 					<div class="doodle">
-						{#if data.status == 'COMPLETED'}
-							<img src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
+						{#if data.imageUrl}
+							<img class="doodle" src={data.imageUrl} alt="Doodle" />
 						{:else}
 							<input
 								type="file"
@@ -62,10 +64,6 @@
 								bind:files
 								on:change={handleUpload}
 							/>
-
-							{#if imageUrl}
-								<img src={imageUrl} alt="Requested doodle" />
-							{/if}
 						{/if}
 					</div>
 

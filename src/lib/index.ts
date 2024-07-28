@@ -19,4 +19,5 @@ export interface AdminData {
 	ownerId: string;
 	ownerEmail: string;
 	status: 'PAID' | 'DOING' | 'COMPLETED';
+	imageUrl?: string;
 }
