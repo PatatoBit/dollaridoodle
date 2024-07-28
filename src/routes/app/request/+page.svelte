@@ -43,26 +43,36 @@
 						<img class="doodle" src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
 					{/if}
 				</div>
+
 				<div class="side">
-					{#if success}
-						<p>Thank you!</p>
-						<!-- content here -->
-					{/if}
+					<div class="info">
+						{#if success}
+							<div class="success-badge">
+								<h4>Thank you!</h4>
 
-					<div class="details">
-						<p class="label">Prompt</p>
-						<h1>{data.prompt}</h1>
-					</div>
+								<div>
+									<p>your request has been successfully sent</p>
+									<p>this page will be updated once your doodle is finished</p>
+								</div>
+							</div>
+							<!-- content here -->
+						{/if}
 
-					<div class="details">
-						<p class="label">Resolution</p>
-						<p>{Resolution[data.resolution]}</p>
-					</div>
+						<div class="details">
+							<p class="label">Prompt</p>
+							<h1>{data.prompt}</h1>
+						</div>
 
-					<div class="details">
-						<p class="label">Requested by</p>
-						<h3>{data.ownerName}</h3>
-						<p>{data.ownerEmail}</p>
+						<div class="details">
+							<p class="label">Resolution</p>
+							<p>{Resolution[data.resolution]}</p>
+						</div>
+
+						<div class="details">
+							<p class="label">Requested by</p>
+							<h3>{data.ownerName}</h3>
+							<p>{data.ownerEmail}</p>
+						</div>
 					</div>
 				</div>
 			{:else}
@@ -80,6 +90,23 @@
 		width: 20rem;
 		aspect-ratio: 1;
 		object-fit: contain;
+	}
+
+	.success-badge {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+
+		border: 1px solid var(--primary);
+		color: var(--primary);
+		padding: 0.7rem;
+		border-radius: 0.3rem;
+
+		max-width: 100%;
+
+		p {
+			font-size: small;
+		}
 	}
 
 	.page {
@@ -102,10 +129,15 @@
 	}
 
 	.side {
-		flex: 1;
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		flex: 1;
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+		}
 	}
 
 	.details {

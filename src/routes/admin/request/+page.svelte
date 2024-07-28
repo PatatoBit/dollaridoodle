@@ -90,31 +90,24 @@
 						</select>
 					</div>
 				</div>
-				<div class="side">
-					<div class="details">
-						<p class="label">Prompt</p>
-						<h1>{data.prompt}</h1>
-					</div>
 
-					<div class="detail-row">
+				<div class="side">
+					<div class="info">
+						<div class="details">
+							<p class="label">Prompt</p>
+							<h1>{data.prompt}</h1>
+						</div>
+
 						<div class="details">
 							<p class="label">Resolution</p>
 							<p>{Resolution[data.resolution]}</p>
 						</div>
 
 						<div class="details">
-							<p class="label">Details</p>
-
-							{#if data.isExpress}
-								<p>Express</p>
-							{/if}
+							<p class="label">Requested by</p>
+							<h3>{data.ownerName}</h3>
+							<p>{data.ownerEmail}</p>
 						</div>
-					</div>
-
-					<div class="details">
-						<p class="label">Requested by</p>
-						<h3>{data.ownerName}</h3>
-						<p>{data.ownerEmail}</p>
 					</div>
 				</div>
 			{:else}
@@ -161,16 +154,16 @@
 	}
 
 	.side {
-		flex: 1;
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
-	}
+		flex: 1;
+		gap: 1rem;
 
-	.detail-row {
-		display: flex;
-		flex-direction: row;
-		gap: 2.5rem;
+		.info {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+		}
 	}
 
 	.details {
