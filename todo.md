@@ -1,6 +1,9 @@
 # todo
 - Update customize page to display prices
 - Update resolutions to details
+- Change primary font
+- Changing image after submitting
+- Explore layout
 
 ## general
 
