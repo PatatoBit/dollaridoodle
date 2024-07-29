@@ -36,6 +36,10 @@ input {
 	border-bottom: 1px solid var(--text);
 }
 
+img {
+	border-radius: 0.5rem;
+}
+
 select {
 	width: 10rem;
 	font-family: 'Rubik', sans-serif;

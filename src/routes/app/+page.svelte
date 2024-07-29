@@ -27,7 +27,7 @@
 
 			<br />
 
-			<button on:click={() => SignOut(auth)}>Sign out</button>
+			<button on:click={() => SignOut(auth)}>sign out</button>
 		</SignedIn>
 	</div>
 </main>

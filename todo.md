@@ -1,10 +1,5 @@
 # todo
 
-## bugs 
-
-- "Explore other doodles"
-- "Make it happen" button decapitalize
-
 ## polishing
 
 - Free first request

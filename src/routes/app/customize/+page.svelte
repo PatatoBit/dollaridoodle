@@ -81,7 +81,7 @@
 
 			<br />
 
-			<button type="submit">Make it happen</button>
+			<button type="submit">make it happen</button>
 		</div>
 	</form>
 </div>
