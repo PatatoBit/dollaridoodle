@@ -115,7 +115,6 @@
 		flex-direction: column;
 		gap: 2rem;
 	}
-
 	.input {
 		display: flex;
 		flex-direction: row;
@@ -143,6 +142,7 @@
 		.cost-line {
 			display: flex;
 			justify-content: space-between;
+			text-transform: capitalize;
 		}
 	}
 
