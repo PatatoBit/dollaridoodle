@@ -2,6 +2,10 @@
 	let isDarkMode: boolean;
 </script>
 
+<svelte:head>
+	<title>DollaryDoodle</title>
+</svelte:head>
+
 <main class="page">
 	<div class="wrapper">
 		<div class="center">
