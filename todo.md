@@ -1,6 +1,7 @@
 # todo
 
 - Express first
+- Centralize config
 
 ## polishing
 
