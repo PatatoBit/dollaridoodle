@@ -24,3 +24,15 @@ export interface AdminData {
 	status: 'PAID' | 'DOING' | 'COMPLETED';
 	imageUrl?: string;
 }
+
+export enum Resolution {
+	small = 'small',
+	medium = 'Medium',
+	large = 'LARGE'
+}
+
+export enum ResolutionPrice {
+	small = 3,
+	medium = 7,
+	large = 9
+}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { ResolutionPrice } from '$lib';
 	import { auth } from '$lib/firebase';
 	import { userStore } from 'sveltefire';
 
@@ -6,98 +7,106 @@
 	let prompt: string = urlParams.get('prompt') || '';
 
 	const user = userStore(auth);
+
+	let resolution: 'small' | 'medium' | 'large' = 'small';
+	let isExpress: boolean;
 </script>
 
 <div class="page">
-	<div class="wrapper">
-		<form class="layout" method="post" action="?/checkout">
-			<div class="custom">
-				<div>
-					<p class="label">Your prompt</p>
-					<input type="text" name="prompt" bind:value={prompt} required />
-				</div>
-
-				<input name="ownerName" type="hidden" value={$user?.displayName} />
-				<input name="ownerId" type="hidden" value={$user?.uid} />
-				<input name="ownerEmail" type="hidden" value={$user?.email} />
-
-				<div class="inputs">
-					<div class="input">
-						<div>
-							<p>Resolution</p>
-						</div>
-
-						<select name="resolution">
-							<option value="small">small</option>
-							<option value="medium">Medium</option>
-							<option value="large">LARGE</option>
-						</select>
-					</div>
-
-					<div class="input">
-						<div>
-							<p>Private request</p>
-							<p class="label">won't show up in the public gallery</p>
-						</div>
-
-						<input type="checkbox" name="private" />
-					</div>
-
-					<div class="input">
-						<div>
-							<p>Express priority</p>
-							<p class="label">your request will be ahead in the queue</p>
-						</div>
-
-						<input type="checkbox" name="express" />
-					</div>
-				</div>
+	<form class="layout" method="post" action="?/checkout">
+		<div class="custom">
+			<div>
+				<p class="label">Your prompt</p>
+				<input type="text" name="prompt" bind:value={prompt} required />
 			</div>
 
-			<div class="checkout">
-				<div class="preview-container"></div>
+			<input name="ownerName" type="hidden" value={$user?.displayName} />
+			<input name="ownerId" type="hidden" value={$user?.uid} />
+			<input name="ownerEmail" type="hidden" value={$user?.email} />
 
-				<div class="cost-line">
-					<p class="label">Small doodle</p>
-					<p class="label">1 Ticket</p>
+			<div class="inputs">
+				<div class="input">
+					<div>
+						<p>Resolution</p>
+					</div>
+
+					<select name="resolution" bind:value={resolution}>
+						<option value="small">small</option>
+						<option value="medium">Medium</option>
+						<option value="large">LARGE</option>
+					</select>
 				</div>
 
-				<div class="cost-line">
-					<p>Total</p>
-					<p>1 Ticket</p>
+				<div class="input">
+					<div>
+						<p>Private request</p>
+						<p class="label">won't show up in the public gallery</p>
+					</div>
+
+					<input type="checkbox" name="private" />
 				</div>
 
-				<br />
+				<div class="input">
+					<div>
+						<p>Express priority</p>
+						<p class="label">your request will be ahead in the queue</p>
+					</div>
 
-				<button type="submit">Make it happen</button>
+					<input type="checkbox" name="express" bind:checked={isExpress} />
+				</div>
 			</div>
-		</form>
-	</div>
+		</div>
+
+		<div class="checkout">
+			<div class="preview-container">
+				<img src="/images/resolution/{resolution}.png" alt="" />
+			</div>
+
+			<div class="cost-line">
+				<p class="label">{resolution} doodle</p>
+				<p class="label">${ResolutionPrice[resolution]}</p>
+			</div>
+
+			{#if isExpress}
+				<div class="cost-line">
+					<p class="label">Express priority</p>
+					<p class="label">$3</p>
+				</div>
+			{/if}
+
+			<div class="cost-line">
+				<p>Total</p>
+				<p>${ResolutionPrice[resolution] + (isExpress ? 3 : 0)}</p>
+			</div>
+
+			<br />
+
+			<button type="submit">Make it happen</button>
+		</div>
+	</form>
 </div>
 
 <style lang="scss">
 	.page {
 		display: flex;
-		align-items: center;
-	}
-
-	.wrapper {
-		width: 55rem;
+		padding-top: 5rem;
 	}
 
 	.layout {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		width: 100%;
 		gap: 2rem;
+
+		flex-wrap: wrap;
+		align-items: center;
 	}
 
 	.custom {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		width: 100%;
-		flex: 3;
+		width: 35rem;
 		gap: 4rem;
 	}
 
@@ -126,10 +135,10 @@
 	.checkout {
 		display: flex;
 		flex-direction: column;
-		flex: 1;
 		gap: 1rem;
 		padding: 1.2rem;
-		background: white;
+
+		width: 15rem;
 
 		.cost-line {
 			display: flex;
@@ -140,6 +149,8 @@
 	.preview-container {
 		width: 100%;
 		aspect-ratio: 1;
-		border: 1px solid var(--text);
+		img {
+			max-width: 100%;
+		}
 	}
 </style>

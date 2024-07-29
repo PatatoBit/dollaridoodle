@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { AdminData, RequestData } from '$lib';
+	import { Resolution, type AdminData, type RequestData } from '$lib';
 	import { db } from '$lib/firebase';
 	import { GetFile, UploadFile } from '$lib/utils';
 	import { doc, onSnapshot, setDoc } from 'firebase/firestore';
@@ -12,11 +12,6 @@
 
 	let data: AdminData;
 
-	enum Resolution {
-		small = 'small',
-		medium = 'Medium',
-		large = 'LARGE'
-	}
 	if (docRef) {
 		onSnapshot(docRef, (doc) => {
 			if (doc.exists()) {
