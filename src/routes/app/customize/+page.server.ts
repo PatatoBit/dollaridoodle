@@ -5,15 +5,9 @@ import type { Actions } from './$types';
 import { STRIPE_SECRET_KEY } from '$env/static/private';
 import { v4 as uuidv4 } from 'uuid';
 import type { RequestData } from '$lib';
+import { ProductId } from '$lib/config';
 
 const stripe = new Stripe(STRIPE_SECRET_KEY);
-
-enum ProductId {
-	basic = 'price_1PedNuJIiOwtKCnppUppAMtk',
-	detailed = 'price_1Pg6PxJIiOwtKCnp27VyMcy1',
-	coloured = 'price_1Pg6QSJIiOwtKCnpaF0G7Sh5',
-	express = 'price_1PhqgyJIiOwtKCnphBC1MM7E'
-}
 
 export const actions: Actions = {
 	checkout: async ({ request }) => {
