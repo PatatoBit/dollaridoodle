@@ -47,6 +47,13 @@
 						<img class="doodle" src={data.imageUrl} alt="Doodle" />
 					{:else}
 						<img class="doodle" src="/images/resolution/{data.resolution}.png" alt="Placeholder" />
+
+						<br />
+
+						<div class="details">
+							<p class="label">Status</p>
+							<p>{data.status}</p>
+						</div>
 					{/if}
 				</div>
 
