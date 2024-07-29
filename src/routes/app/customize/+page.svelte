@@ -70,13 +70,13 @@
 			{#if isExpress}
 				<div class="cost-line">
 					<p class="label">Express priority</p>
-					<p class="label">$3</p>
+					<p class="label">$2</p>
 				</div>
 			{/if}
 
 			<div class="cost-line">
 				<p>Total</p>
-				<p>${ResolutionPrice[resolution] + (isExpress ? 3 : 0)}</p>
+				<p>${ResolutionPrice[resolution] + (isExpress ? 2 : 0)}</p>
 			</div>
 
 			<br />

@@ -38,6 +38,11 @@ export const actions: Actions = {
 					{
 						price: ProductId[payloadData.resolution],
 						quantity: 1
+					},
+					// Express
+					{
+						price: 'price_1PhqgyJIiOwtKCnphBC1MM7E',
+						quantity: payloadData.isExpress ? 1 : 0
 					}
 				],
 				mode: 'payment',
