@@ -90,7 +90,7 @@
 
 	.doodles {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
 		grid-gap: 1rem;
 
 		.doodle {
@@ -104,7 +104,8 @@
 			}
 
 			img {
-				max-width: 100%;
+				width: 100%;
+				aspect-ratio: 1;
 				border-radius: 0.5rem;
 			}
 		}
