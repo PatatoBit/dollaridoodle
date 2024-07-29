@@ -2,12 +2,10 @@
 
 ## polishing
 
-- Update resolutions to details
 - Free first request
 - Resolution clarification
 - Landing page content
 - Explore other doodles in request page
-- Changing image after submitting
 
 ## general
 - Landing page
