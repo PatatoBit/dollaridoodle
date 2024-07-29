@@ -33,7 +33,7 @@
 </main>
 
 <article class="wrapper">
-	<h2>Explore doodles</h2>
+	<h2>Explore other doodles</h2>
 
 	<br />
 
