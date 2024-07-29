@@ -22,6 +22,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>DollaryDoodle Request</title>
+</svelte:head>
+
 <div class="page">
 	<div class="back-button">
 		<a href="/app"><button>Go back</button></a>

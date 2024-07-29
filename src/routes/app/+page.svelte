@@ -15,6 +15,10 @@
 	const publicDoodles = collectionStore(db, publicDoodlesQuery);
 </script>
 
+<svelte:head>
+	<title>DollaryDoodle</title>
+</svelte:head>
+
 <main class="page">
 	<div class="center">
 		<SignedIn let:auth>

@@ -12,6 +12,10 @@
 	let isExpress: boolean;
 </script>
 
+<svelte:head>
+	<title>Customize your request</title>
+</svelte:head>
+
 <div class="page">
 	<form class="layout" method="post" action="?/checkout">
 		<div class="custom">
