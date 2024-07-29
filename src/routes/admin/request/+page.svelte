@@ -65,6 +65,12 @@
 					<div class="doodle">
 						{#if data.imageUrl}
 							<img class="doodle" src={data.imageUrl} alt="Doodle" />
+							<input
+								type="file"
+								accept="image/png, image/jpeg"
+								bind:files
+								on:change={handleUpload}
+							/>
 						{:else}
 							<input
 								type="file"
@@ -118,6 +124,7 @@
 <style lang="scss">
 	.doodle {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 
@@ -125,7 +132,6 @@
 		aspect-ratio: 1;
 		object-fit: contain;
 
-		border: 2px solid var(--text);
 		border-radius: 0.3rem;
 	}
 
