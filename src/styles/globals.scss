@@ -40,12 +40,19 @@ select {
 	width: 10rem;
 	font-family: 'Rubik', sans-serif;
 	font-size: 18px;
-	background-color: transparent;
+	background-color: var(--off-white);
+	padding: 0.5rem 0.6rem;
 
-	color: var(--text);
+	color: var(--off-black);
 	border: none;
-	border-radius: 0;
+	border-radius: 0.3rem;
 	outline: none;
+
+	transition: all 1s ease-in-out;
+
+	&:active {
+		transform: scale(1.05);
+	}
 }
 
 a {
