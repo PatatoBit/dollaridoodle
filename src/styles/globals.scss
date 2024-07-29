@@ -101,6 +101,10 @@ button,
 	min-height: 80vh;
 }
 
+.capital {
+	text-transform: capitalize;
+}
+
 article {
 	padding-bottom: 5rem;
 }

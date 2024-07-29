@@ -10,12 +10,6 @@
 
 	let data: RequestData;
 
-	enum Resolution {
-		small = 'small',
-		medium = 'Medium',
-		large = 'LARGE'
-	}
-
 	if (docRef) {
 		onSnapshot(docRef, (doc) => {
 			if (doc.exists()) {
@@ -65,7 +59,7 @@
 
 						<div class="details">
 							<p class="label">Resolution</p>
-							<p>{Resolution[data.resolution]}</p>
+							<p class="capital">{data.resolution}</p>
 						</div>
 
 						<div class="details">

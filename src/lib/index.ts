@@ -1,7 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 export interface RequestData {
 	prompt: string;
-	resolution: 'small' | 'medium' | 'large';
+	resolution: Resolution;
 	isPrivate: boolean;
 	isExpress: boolean;
 	ownerName: string;
@@ -15,7 +15,7 @@ export interface RequestData {
 export interface AdminData {
 	id: string;
 	prompt: string;
-	resolution: 'small' | 'medium' | 'large';
+	resolution: Resolution;
 	isPrivate: boolean;
 	isExpress: boolean;
 	ownerName: string;
@@ -25,14 +25,10 @@ export interface AdminData {
 	imageUrl?: string;
 }
 
-export enum Resolution {
-	small = 'small',
-	medium = 'Medium',
-	large = 'LARGE'
-}
+export type Resolution = 'basic' | 'detailed' | 'coloured';
 
-export enum ResolutionPrice {
-	small = 3,
-	medium = 7,
-	large = 9
-}
+export const Prices = {
+	basic: 3,
+	detailed: 7,
+	coloured: 9
+};

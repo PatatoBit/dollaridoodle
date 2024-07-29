@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { Resolution, type AdminData, type RequestData } from '$lib';
+	import { type AdminData, type RequestData } from '$lib';
 	import { db } from '$lib/firebase';
 	import { GetFile, UploadFile } from '$lib/utils';
 	import { doc, onSnapshot, setDoc } from 'firebase/firestore';
@@ -95,7 +95,7 @@
 
 						<div class="details">
 							<p class="label">Resolution</p>
-							<p>{Resolution[data.resolution]}</p>
+							<p class="capital">{data.resolution}</p>
 						</div>
 
 						<div class="details">

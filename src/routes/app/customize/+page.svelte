@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ResolutionPrice } from '$lib';
+	import { Prices, type Resolution } from '$lib';
 	import { auth } from '$lib/firebase';
 	import { userStore } from 'sveltefire';
 
@@ -8,7 +8,7 @@
 
 	const user = userStore(auth);
 
-	let resolution: 'small' | 'medium' | 'large' = 'small';
+	let resolution: Resolution = 'basic';
 	let isExpress: boolean;
 </script>
 
@@ -31,9 +31,9 @@
 					</div>
 
 					<select name="resolution" bind:value={resolution}>
-						<option value="small">small</option>
-						<option value="medium">Medium</option>
-						<option value="large">LARGE</option>
+						<option value="basic">Basic</option>
+						<option value="detailed">Detailed</option>
+						<option value="coloured">Coloured</option>
 					</select>
 				</div>
 
@@ -64,7 +64,7 @@
 
 			<div class="cost-line">
 				<p class="label">{resolution} doodle</p>
-				<p class="label">${ResolutionPrice[resolution]}</p>
+				<p class="label">${Prices[resolution]}</p>
 			</div>
 
 			{#if isExpress}
@@ -76,7 +76,7 @@
 
 			<div class="cost-line">
 				<p>Total</p>
-				<p>${ResolutionPrice[resolution] + (isExpress ? 2 : 0)}</p>
+				<p>${Prices[resolution] + (isExpress ? 2 : 0)}</p>
 			</div>
 
 			<br />

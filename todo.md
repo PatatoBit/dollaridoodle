@@ -2,8 +2,8 @@
 
 ## polishing
 
-- Free first request
 - Update resolutions to details
+- Free first request
 - Resolution clarification
 - Landing page content
 - Explore other doodles in request page
