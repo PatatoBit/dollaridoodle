@@ -11,7 +11,8 @@ const stripe = new Stripe(STRIPE_SECRET_KEY);
 enum ProductId {
 	small = 'price_1PedNuJIiOwtKCnppUppAMtk',
 	medium = 'price_1Pg6PxJIiOwtKCnp27VyMcy1',
-	large = 'price_1Pg6QSJIiOwtKCnpaF0G7Sh5'
+	large = 'price_1Pg6QSJIiOwtKCnpaF0G7Sh5',
+	express = 'price_1PhqgyJIiOwtKCnphBC1MM7E'
 }
 
 export const actions: Actions = {
@@ -33,18 +34,23 @@ export const actions: Actions = {
 		try {
 			const uniqueId = uuidv4();
 
+			const checkoutItems = [
+				{
+					price: ProductId[payloadData.resolution],
+					quantity: 1
+				}
+			];
+
+			// Add express checkout if isEpress
+			if (payloadData.isExpress) {
+				checkoutItems.push({
+					price: ProductId.express,
+					quantity: 1
+				});
+			}
+
 			const session = await stripe.checkout.sessions.create({
-				line_items: [
-					{
-						price: ProductId[payloadData.resolution],
-						quantity: 1
-					},
-					// Express
-					{
-						price: 'price_1PhqgyJIiOwtKCnphBC1MM7E',
-						quantity: payloadData.isExpress ? 1 : 0
-					}
-				],
+				line_items: checkoutItems,
 				mode: 'payment',
 				payment_method_types: ['card'],
 				success_url: `${request.headers.get('origin')}/app/request/?id=${uniqueId}&success=true`,

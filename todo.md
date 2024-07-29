@@ -2,7 +2,6 @@
 
 ## bugs 
 
-- Fix no express option
 - Input label font color
 - "Explore other doodles"
 - "Make it happen" button decapitalize
