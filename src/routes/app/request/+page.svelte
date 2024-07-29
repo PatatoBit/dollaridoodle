@@ -33,6 +33,18 @@
 		<a href="/app"><button>Go back</button></a>
 	</div>
 
+	{#if success}
+		<div class="success-badge">
+			<h4>Thank you!</h4>
+
+			<div>
+				<p>your request has been successfully sent</p>
+				<p>this page will be updated once your doodle is finished</p>
+			</div>
+		</div>
+		<!-- content here -->
+	{/if}
+
 	<div class="wrapper">
 		{#if idString}
 			{#if data}
@@ -46,18 +58,6 @@
 
 				<div class="side">
 					<div class="info">
-						{#if success}
-							<div class="success-badge">
-								<h4>Thank you!</h4>
-
-								<div>
-									<p>your request has been successfully sent</p>
-									<p>this page will be updated once your doodle is finished</p>
-								</div>
-							</div>
-							<!-- content here -->
-						{/if}
-
 						<div class="details">
 							<p class="label">Prompt</p>
 							<h1>{data.prompt}</h1>
@@ -93,8 +93,14 @@
 	}
 
 	.success-badge {
+		position: absolute;
 		display: flex;
 		flex-direction: column;
+		top: 1rem;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
 		gap: 0.2rem;
 
 		border: 1px solid var(--primary);
@@ -102,7 +108,7 @@
 		padding: 0.7rem;
 		border-radius: 0.3rem;
 
-		max-width: 100%;
+		max-width: 22rem;
 
 		p {
 			font-size: small;
@@ -112,6 +118,7 @@
 	.page {
 		display: flex;
 		align-items: center;
+		position: relative;
 	}
 
 	.back-button {

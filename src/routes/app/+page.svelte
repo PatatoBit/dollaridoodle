@@ -35,6 +35,8 @@
 <article class="wrapper">
 	<h2>Explore doodles</h2>
 
+	<br />
+
 	<div class="doodles">
 		{#each $publicDoodles as publicDoodle}
 			<div class="doodle">
@@ -87,13 +89,15 @@
 	}
 
 	.doodles {
-		columns: 3;
-		column-gap: 1rem;
-		break-inside: avoid;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+		grid-gap: 1rem;
 
 		.doodle {
-			grid-row-end: span 10;
 			margin-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			flex: 1;
 
 			.label {
 				text-align: center;
