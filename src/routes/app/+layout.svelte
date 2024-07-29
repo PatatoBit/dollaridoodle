@@ -14,7 +14,7 @@
 			<div class="container">
 				<div>
 					<h2>Get started for free</h2>
-					<p>Sign up and get a free first request</p>
+					<p>Sign up to start making your art idea a reality</p>
 				</div>
 
 				<button on:click={async () => await SignInWithGoogle(auth)}>Sign in with Google</button>

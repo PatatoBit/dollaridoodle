@@ -19,7 +19,7 @@
 	<div class="center">
 		<SignedIn let:auth>
 			<form class="input-bar" action="app/customize">
-				<input type="text" placeholder="Some funny cats.." name="prompt" required />
+				<input type="text" placeholder="some funny cats.." name="prompt" required />
 				<button class="icon" type="submit">
 					<img src="/icons/arrow-up-right.svg" alt="Send arrow" />
 				</button>
