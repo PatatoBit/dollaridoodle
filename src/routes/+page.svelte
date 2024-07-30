@@ -30,6 +30,8 @@
 
 <article class="page">
 	<div class="wrapper">
+		<h2>How does this work?</h2>
+
 		<div class="abouts">
 			<div class="about">
 				<img class="about-image invert" src="/images/funnicat.png" alt="funni cat prompt" />
@@ -61,7 +63,51 @@
 	</div>
 </article>
 
+<article class="page">
+	<div class="wrapper">
+		<h2>Pricing</h2>
+		<div class="abouts">
+			<div class="about">
+				<img src="/images/resolution/basic.png" alt="Basic Doodle" />
+				<div class="about-text">
+					<h3>Basic</h3>
+					<p>$0.99</p>
+				</div>
+			</div>
+
+			<div class="about">
+				<img src="images/resolution/detailed.png" alt="Detailed Doodle" />
+				<div class="about-text">
+					<h3>Detailed</h3>
+					<p>$3.99</p>
+				</div>
+			</div>
+
+			<div class="about">
+				<img src="/images/resolution/coloured.png" alt="Coloured Doodle" />
+				<div class="about-text">
+					<h3>Coloured</h3>
+					<p>$5.99</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
 <style lang="scss">
+	h2 {
+		color: var(--primary);
+	}
+
+	article {
+		padding: 0;
+		margin: 5rem 0;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
 	.hero {
 		color: var(--primary);
 		justify-content: center;
@@ -90,6 +136,8 @@
 			align-items: center;
 			width: 13rem;
 			height: 20rem;
+			margin: 1rem 0;
+			gap: 1rem;
 
 			.about-text {
 				text-align: center;

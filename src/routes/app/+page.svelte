@@ -2,6 +2,7 @@
 	import { db } from '$lib/firebase';
 	import { SignOut } from '$lib/utils';
 	import { collection, orderBy, query, where } from 'firebase/firestore';
+	import { fly, slide } from 'svelte/transition';
 	import { collectionStore, SignedIn } from 'sveltefire';
 
 	const requestsRef = collection(db, 'requests');
@@ -43,7 +44,7 @@
 
 	<div class="doodles">
 		{#each $publicDoodles as publicDoodle}
-			<div class="doodle">
+			<div class="doodle" transition:slide>
 				{#if publicDoodle.status === 'COMPLETED'}
 					<a href={`/app/request/?id=${publicDoodle.id}`}>
 						<img src={publicDoodle.imageUrl} alt="Doodle" />
@@ -65,10 +66,10 @@
 		flex-direction: row;
 		gap: 1rem;
 		width: 100%;
+		max-height: 100%;
 
 		input {
 			flex: 1 auto;
-			padding: 0.5rem;
 		}
 	}
 
@@ -77,10 +78,8 @@
 		border: 1px solid var(--primary);
 	}
 
-	.page {
-		display: flex;
-		align-items: center;
-		min-height: 30vh;
+	article {
+		min-height: 10vh;
 	}
 
 	.center {

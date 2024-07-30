@@ -3,6 +3,7 @@
 	import type { RequestData } from '$lib';
 	import { db } from '$lib/firebase';
 	import { doc, onSnapshot } from 'firebase/firestore';
+	import { fade, fly, slide } from 'svelte/transition';
 
 	const idString = $page.url.searchParams.get('id');
 	const success = $page.url.searchParams.get('success');
@@ -26,7 +27,7 @@
 	<title>DollaryDoodle Request</title>
 </svelte:head>
 
-<div class="page">
+<div class="center">
 	<div class="back-button">
 		<a href="/app"><button>Go back</button></a>
 	</div>
@@ -46,7 +47,7 @@
 	<div class="wrapper">
 		{#if idString}
 			{#if data}
-				<div class="side">
+				<div class="side" transition:slide>
 					{#if data.imageUrl}
 						<img class="doodle" src={data.imageUrl} alt="Doodle" />
 					{:else}
@@ -61,7 +62,7 @@
 					{/if}
 				</div>
 
-				<div class="side">
+				<div class="side" transition:slide>
 					<div class="info">
 						<div class="details">
 							<p class="label">Prompt</p>
@@ -81,7 +82,9 @@
 					</div>
 				</div>
 			{:else}
-				<p>Loading...</p>
+				<div class="center" in:fade>
+					<h1>Loading...</h1>
+				</div>
 			{/if}
 		{:else}
 			no id
@@ -118,12 +121,6 @@
 		p {
 			font-size: small;
 		}
-	}
-
-	.page {
-		display: flex;
-		align-items: center;
-		position: relative;
 	}
 
 	.back-button {
