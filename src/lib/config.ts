@@ -1,6 +1,6 @@
 export enum ProductId {
-	basic = 'price_1Phv4HJIiOwtKCnpztp0ln1L',
-	detailed = 'price_1Phv4GJIiOwtKCnpQA9jDU5A',
-	coloured = 'price_1Phv4CJIiOwtKCnpaHZBBwi2',
+	basic = 'price_1Pi8HKJIiOwtKCnpUFo6e6yu',
+	detailed = 'price_1Pi8IbJIiOwtKCnpsO5su4Ka',
+	coloured = 'price_1Pi8JiJIiOwtKCnpVaOt2STO',
 	express = 'price_1Phv4KJIiOwtKCnpn6nNdein'
 }

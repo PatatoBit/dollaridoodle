@@ -28,7 +28,7 @@ export interface AdminData {
 export type Resolution = 'basic' | 'detailed' | 'coloured';
 
 export const Prices = {
-	basic: 3,
-	detailed: 7,
-	coloured: 9
+	basic: 0.99,
+	detailed: 3.99,
+	coloured: 5.99
 };

@@ -28,6 +28,8 @@ export const actions: Actions = {
 		try {
 			const uniqueId = uuidv4();
 
+			console.log(ProductId);
+
 			const checkoutItems = [
 				{
 					price: ProductId[payloadData.resolution],
