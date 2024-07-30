@@ -80,6 +80,7 @@
 	.page {
 		display: flex;
 		align-items: center;
+		min-height: 30vh;
 	}
 
 	.center {

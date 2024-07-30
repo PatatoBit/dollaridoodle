@@ -30,10 +30,13 @@ input {
 
 	color: var(--text);
 	border: none;
-	border-radius: 0;
-	padding: 0.5rem 0;
+	border-radius: 0.5rem;
+	padding: 1rem;
 	outline: none;
-	border-bottom: 1px solid var(--text);
+
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+	background-color: var(--off-white);
 }
 
 img {
