@@ -45,7 +45,9 @@
 							{paidRequest.prompt}
 						</p>
 
-						<p>{formatDistance(paidRequest.createdAt.toDate(), new Date(), { addSuffix: true })}</p>
+						<p class="label">
+							{formatDistance(paidRequest.createdAt.toDate(), new Date(), { addSuffix: true })}
+						</p>
 					</a>
 				{/each}
 			</div>
@@ -60,7 +62,7 @@
 							{completedRequest.prompt}
 						</p>
 
-						<p>
+						<p class="label">
 							{formatDistance(completedRequest.createdAt.toDate(), new Date(), { addSuffix: true })}
 						</p>
 					</a>
@@ -72,9 +74,9 @@
 
 <style lang="scss">
 	.wrapper {
+		display: block;
 		gap: 2rem;
 		padding-top: 2rem;
-		align-items: baseline;
 	}
 
 	.list {
