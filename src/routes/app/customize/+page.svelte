@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Prices, type Resolution } from '$lib';
 	import { auth } from '$lib/firebase';
+	import { fade, slide } from 'svelte/transition';
 	import { userStore } from 'sveltefire';
 
 	const urlParams = new URLSearchParams(window.location.search);
@@ -72,13 +73,13 @@
 			</div>
 
 			{#if isExpress}
-				<div class="cost-line">
+				<div class="cost-line" transition:slide>
 					<p class="label">Express priority</p>
 					<p class="label">$2</p>
 				</div>
 			{/if}
 
-			<div class="cost-line">
+			<div class="cost-line" transition:fade>
 				<p>Total</p>
 				<p>${Prices[resolution] + (isExpress ? 2 : 0)}</p>
 			</div>
