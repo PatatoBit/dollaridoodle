@@ -87,28 +87,47 @@
 <article class="page">
 	<div class="wrapper">
 		<h2>Pricing</h2>
-		<div class="abouts">
-			<div class="about">
+		<p>humans have to eat</p>
+
+		<br />
+
+		<div class="prices">
+			<div class="price">
 				<img src="/images/resolution/basic.png" alt="Basic Doodle" />
-				<div class="about-text">
+				<div class="price-text">
 					<h3>Basic</h3>
-					<p>$0.99</p>
+					<p>simple doodle</p>
+					<p>minimal details</p>
+				</div>
+
+				<div class="price-label">
+					<h4>$0.99</h4>
 				</div>
 			</div>
 
-			<div class="about">
+			<div class="price">
 				<img src="images/resolution/detailed.png" alt="Detailed Doodle" />
-				<div class="about-text">
+				<div class="price-text">
 					<h3>Detailed</h3>
-					<p>$3.99</p>
+					<p>doodle with more details</p>
+					<p>and more details</p>
+				</div>
+
+				<div class="price-label">
+					<h4>$3.99</h4>
 				</div>
 			</div>
 
-			<div class="about">
+			<div class="price">
 				<img src="/images/resolution/coloured.png" alt="Coloured Doodle" />
-				<div class="about-text">
+				<div class="price-text">
 					<h3>Coloured</h3>
-					<p>$5.99</p>
+					<p>a detailed doodle</p>
+					<p>but with colours!</p>
+				</div>
+
+				<div class="price-label">
+					<h4>$5.99</h4>
 				</div>
 			</div>
 		</div>
@@ -177,6 +196,45 @@
 		}
 	}
 
+	.prices {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		max-width: 100%;
+		gap: 2rem;
+
+		.price {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			flex: 1;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.price-text {
+			margin-top: 1rem;
+			flex: 1;
+		}
+
+		.price-label {
+			position: absolute;
+			rotate: 7deg;
+			bottom: 0;
+			right: 0;
+
+			border-radius: 2rem;
+
+			padding: 0.5rem 1rem;
+			background-color: var(--secondary);
+			color: var(--background);
+		}
+	}
+
 	.compares {
 		display: flex;
 		flex-direction: row;
@@ -204,6 +262,16 @@
 
 			.about {
 				width: 100%;
+			}
+		}
+
+		.prices {
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+
+			.price {
+				width: 20rem;
 			}
 		}
 	}
