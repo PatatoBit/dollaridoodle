@@ -61,6 +61,10 @@
 </article>
 
 <style lang="scss">
+	.page {
+		justify-content: center;
+	}
+
 	.input-bar {
 		display: flex;
 		flex-direction: row;
@@ -76,10 +80,6 @@
 	.pending {
 		padding: 2rem;
 		border: 1px solid var(--primary);
-	}
-
-	article {
-		min-height: 10vh;
 	}
 
 	.center {

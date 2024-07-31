@@ -22,7 +22,7 @@ body,
 	min-height: 100vh;
 }
 
-input {
+input[type='text'] {
 	font-family: 'Rubik', sans-serif;
 	font-size: 18px;
 	background-color: transparent;
@@ -38,6 +38,10 @@ input {
 	background-color: var(--off-white);
 }
 
+input[type='file'] {
+	padding: 1rem 0;
+}
+
 img {
 	border-radius: 0.5rem;
 }
@@ -47,7 +51,6 @@ img {
 	flex-direction: column;
 	min-height: 30vh;
 	align-items: center;
-	justify-content: center;
 }
 
 .center {

@@ -53,7 +53,7 @@
 	};
 </script>
 
-<div class="page">
+<div class="center">
 	<div class="back-button">
 		<a href="/admin"><button>Go back</button></a>
 	</div>
@@ -133,11 +133,6 @@
 		object-fit: contain;
 
 		border-radius: 0.3rem;
-	}
-
-	.page {
-		display: flex;
-		align-items: center;
 	}
 
 	.back-button {

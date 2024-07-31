@@ -9,7 +9,7 @@
 </SignedIn>
 
 <SignedOut let:auth>
-	<main class="page">
+	<main class="center">
 		<div class="wrapper">
 			<div class="container">
 				<div>
@@ -24,12 +24,6 @@
 </SignedOut>
 
 <style lang="scss">
-	.page {
-		display: flex;
-		align-items: center;
-		gap: 2.5rem;
-	}
-
 	.container {
 		display: flex;
 		flex-direction: column;

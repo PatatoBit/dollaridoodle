@@ -17,7 +17,7 @@
 	const completedRequests = collectionStore(db, completedQuery);
 </script>
 
-<div class="page">
+<main class="page">
 	<div class="wrapper">
 		<div class="stats">
 			<div class="stat">
@@ -70,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</main>
 
 <style lang="scss">
 	.wrapper {
