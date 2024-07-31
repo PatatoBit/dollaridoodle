@@ -140,8 +140,7 @@
 	}
 
 	article {
-		padding: 0;
-		margin: 5rem 0;
+		padding-bottom: 2rem;
 	}
 
 	img {
