@@ -9,15 +9,15 @@
 <main class="page">
 	<div class="wrapper">
 		<div class="center">
-			<h1 class="hero">Generate your art</h1>
+			<h1 class="hero">Generate your art ideas</h1>
 			<h1 class="hero">
-				with a
+				but with a
 				<img class="human invert" src="/images/human.png" alt="human" />
 			</h1>
 
 			<br />
 
-			<p class="label">image generation with human touch</p>
+			<p class="label">have the human touch in your art generation</p>
 
 			<br />
 			<br />
@@ -27,6 +27,27 @@
 		</div>
 	</div>
 </main>
+
+<div class="page">
+	<div class="wrapper">
+		<h2>Real art takes time</h2>
+		<p>humans don't steal art from others to mush them into a new one in seconds.</p>
+
+		<br />
+
+		<div class="compares">
+			<div class="compare">
+				<img src="https://placeholder.co/500" alt="AI generated" />
+				<p class="label">Stable Diffusion</p>
+			</div>
+
+			<div class="compare">
+				<img src="https://placeholder.co/500" alt="AI generated" />
+				<p class="label">DollaryDoodle</p>
+			</div>
+		</div>
+	</div>
+</div>
 
 <article class="page">
 	<div class="wrapper">
@@ -123,7 +144,7 @@
 	}
 
 	.abouts {
-		width: 100%;
+		max-width: 100%;
 		display: flex;
 		flex-direction: row;
 		flex-flow: row wrap;
@@ -139,6 +160,8 @@
 			margin: 1rem 0;
 			gap: 1rem;
 
+			flex: 1;
+
 			.about-text {
 				text-align: center;
 				line-height: 25px;
@@ -150,6 +173,26 @@
 				max-height: 15rem;
 				object-fit: contain;
 				flex: 2;
+			}
+		}
+	}
+
+	.compares {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 2rem;
+
+		.compare {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+			flex: 1;
+
+			img {
+				max-width: 100%;
 			}
 		}
 	}
