@@ -1,13 +1,11 @@
 # todo
 
-- Express first
-- Centralize config
-
 ## polishing
-
+- Pricing spacing
 - Free first request
 - Resolution clarification
-- Landing page content
+- Express first
+- Centralize config
 - Explore other doodles in request page
 
 ## general
