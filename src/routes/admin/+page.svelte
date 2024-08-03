@@ -6,7 +6,13 @@
 
 	const requestsRef = collection(db, 'requests');
 
-	const paidQuery = query(requestsRef, where('status', '==', 'PAID'), orderBy('createdAt', 'asc'));
+	const paidQuery = query(
+		requestsRef,
+		where('status', '==', 'PAID'),
+		orderBy('isExpress', 'desc'),
+		orderBy('createdAt', 'asc')
+	);
+
 	const completedQuery = query(
 		requestsRef,
 		where('status', '==', 'COMPLETED'),
