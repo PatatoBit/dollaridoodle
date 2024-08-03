@@ -2,8 +2,6 @@
 
 ## polishing
 - Free first request
-- Resolution clarification
-- Express first
 - Explore other doodles in request page
 
 ## general
