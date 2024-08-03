@@ -4,8 +4,6 @@ import Stripe from 'stripe';
 import { Request } from 'firebase-functions/v2/https';
 import { Response } from 'express';
 
-admin.initializeApp();
-
 const handleWebhook = async (
 	req: Request,
 	res: Response,
