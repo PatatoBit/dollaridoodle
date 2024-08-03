@@ -1,73 +1,76 @@
 import { onRequest } from 'firebase-functions/v2/https';
 import * as admin from 'firebase-admin';
 import Stripe from 'stripe';
+import { Request } from 'firebase-functions/v2/https';
+import { Response } from 'express';
 
 admin.initializeApp();
 
-export const handleStripeWebhook = onRequest(
-	{ secrets: ['STRIPE_SECRET_KEY', 'STRIPE_PAYMENT_WEBHOOK_SECRET', 'TEST_KEY', 'TEST_WEBHOOK'] },
-	async (req, res) => {
-		let stripeKey: string | null | undefined;
-		let stripeWebhook: string | null | undefined;
-		const isDev = process.env.NODE_ENV === 'development';
+const handleStripe = async (
+	req: Request,
+	res: Response,
+	stripeKey: string | undefined,
+	stripeWebhook: string | undefined
+) => {
+	if (!stripeKey || !stripeWebhook) {
+		console.error('Stripe secret key or webhook secret not found');
+		res.status(500).send('Server: Stripe secret key or webhook secret not found');
+		return;
+	}
 
-		if (isDev) {
-			stripeKey = process.env.TEST_KEY;
-			stripeWebhook = process.env.TEST_WEBHOOK;
-		} else {
-			stripeKey = process.env.STRIPE_SECRET_KEY;
-			stripeWebhook = process.env.STRIPE_PAYMENT_WEBHOOK_SECRET;
-		}
+	const stripe = new Stripe(stripeKey);
+	const sig = req.headers['stripe-signature'] as string;
+	let event: Stripe.Event;
 
-		if (!stripeKey || !stripeWebhook) {
-			console.error('Stripe secret key or webhook secret not found');
-			res
-				.status(500)
-				.send(
-					`Server: Stripe secret key or webhook secret not found\n ${stripeKey} \n${stripeWebhook}`
-				);
-			return;
-		}
+	try {
+		event = stripe.webhooks.constructEvent(req.rawBody, sig, stripeWebhook);
+	} catch (err) {
+		console.error('⚠️ Webhook signature verification failed.', (err as Error).message);
+		res.status(400).send(`Webhook Error: ${(err as Error).message}`);
+		return;
+	}
 
-		const stripe = new Stripe(stripeKey);
-		const sig = req.headers['stripe-signature'] as string;
-		let event: Stripe.Event;
+	if (event.type === 'checkout.session.completed') {
+		const session = event.data.object as Stripe.Checkout.Session;
+		const payloadData = JSON.parse(session.metadata?.payloadData as string);
 
-		try {
-			event = stripe.webhooks.constructEvent(req.rawBody, sig, stripeWebhook);
-		} catch (err) {
-			console.error('⚠️ Webhook signature verification failed.', (err as Error).message);
-			res
-				.status(400)
-				.send(
-					`Webhook Error: ${(err as Error).message}, ${sig}\n secret: ${stripeKey}, ${stripeWebhook}`
-				);
-			return;
-		}
-
-		if (event.type === 'checkout.session.completed') {
-			const session = event.data.object as Stripe.Checkout.Session;
-			const payloadData = JSON.parse(session.metadata?.payloadData as string);
-
-			if (payloadData) {
-				try {
-					await admin
-						.firestore()
-						.collection('requests')
-						.doc(payloadData.id)
-						.set({
-							...payloadData,
-							status: 'PAID',
-							createdAt: admin.firestore.FieldValue.serverTimestamp()
-						});
-				} catch (error) {
-					console.error('Error updating document:', error);
-				}
-			} else {
-				console.error('No payload data recieved');
+		if (payloadData) {
+			try {
+				await admin
+					.firestore()
+					.collection('requests')
+					.doc(payloadData.id)
+					.set({
+						...payloadData,
+						status: 'PAID',
+						createdAt: admin.firestore.FieldValue.serverTimestamp()
+					});
+			} catch (error) {
+				console.error('Error updating document:', error);
 			}
+		} else {
+			console.error('No payload data received');
 		}
+	}
 
-		res.status(200).json({ received: true });
+	res.status(200).json({ received: true });
+};
+
+export const handleStripeWebhook = onRequest(
+	{ secrets: ['STRIPE_SECRET_KEY', 'STRIPE_PAYMENT_WEBHOOK_SECRET'] },
+	(req, res) => {
+		handleStripe(
+			req,
+			res,
+			process.env.STRIPE_SECRET_KEY,
+			process.env.STRIPE_PAYMENT_WEBHOOK_SECRET
+		);
+	}
+);
+
+export const handleTestStripeWebhook = onRequest(
+	{ secrets: ['TEST_KEY', 'TEST_WEBHOOK'] },
+	(req, res) => {
+		handleStripe(req, res, process.env.TEST_KEY, process.env.TEST_WEBHOOK);
 	}
 );

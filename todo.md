@@ -1,11 +1,9 @@
 # todo
 
 ## polishing
-- Pricing spacing
 - Free first request
 - Resolution clarification
 - Express first
-- Centralize config
 - Explore other doodles in request page
 
 ## general
