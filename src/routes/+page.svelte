@@ -93,41 +93,48 @@
 
 		<div class="prices">
 			<div class="price">
-				<img src="/images/resolution/basic.png" alt="Basic Doodle" />
+				<div class="image">
+					<img src="/images/resolution/basic.png" alt="Basic Doodle" />
+
+					<div class="price-label">
+						<h4>$0.99</h4>
+					</div>
+				</div>
+
 				<div class="price-text">
 					<h3>Basic</h3>
 					<p>simple doodle</p>
 					<p>minimal details</p>
 				</div>
-
-				<div class="price-label">
-					<h4>$0.99</h4>
-				</div>
 			</div>
 
 			<div class="price">
-				<img src="images/resolution/detailed.png" alt="Detailed Doodle" />
+				<div class="image">
+					<img src="images/resolution/detailed.png" alt="Detailed Doodle" />
+
+					<div class="price-label">
+						<h4>$3.99</h4>
+					</div>
+				</div>
+
 				<div class="price-text">
 					<h3>Detailed</h3>
-					<p>doodle with more details</p>
-					<p>and more details</p>
-				</div>
-
-				<div class="price-label">
-					<h4>$3.99</h4>
+					<p>a doodle with more details</p>
 				</div>
 			</div>
 
 			<div class="price">
-				<img src="/images/resolution/coloured.png" alt="Coloured Doodle" />
-				<div class="price-text">
-					<h3>Coloured</h3>
-					<p>a detailed doodle</p>
-					<p>but with colours!</p>
+				<div class="image">
+					<img src="/images/resolution/coloured.png" alt="Coloured Doodle" />
+
+					<div class="price-label">
+						<h4>$5.99</h4>
+					</div>
 				</div>
 
-				<div class="price-label">
-					<h4>$5.99</h4>
+				<div class="price-text">
+					<h3>Coloured</h3>
+					<p>a detailed doodle but with colours</p>
 				</div>
 			</div>
 		</div>
@@ -157,8 +164,9 @@
 	}
 
 	.human {
+		max-width: 100%;
 		max-height: 3rem;
-		margin-left: 0.7rem;
+		padding-left: 0.7rem;
 	}
 
 	.abouts {
@@ -202,15 +210,15 @@
 		flex-wrap: wrap;
 
 		max-width: 100%;
-		gap: 2rem;
+		gap: 4rem;
 
 		.price {
 			display: flex;
 			flex-direction: column;
-			position: relative;
 			flex: 1;
 
-			img {
+			.image {
+				position: relative;
 				max-width: 100%;
 			}
 		}
@@ -223,7 +231,7 @@
 		.price-label {
 			position: absolute;
 			rotate: 7deg;
-			bottom: 0;
+			bottom: -1rem;
 			right: 0;
 
 			border-radius: 2rem;
@@ -237,20 +245,15 @@
 	.compares {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
 		flex-wrap: wrap;
-		gap: 2rem;
+		gap: 1rem;
 
 		.compare {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 1rem;
-			flex: 1;
-
-			img {
-				max-width: 100%;
-			}
+			flex: 1 1 0;
+			gap: 0.6rem;
 		}
 	}
 

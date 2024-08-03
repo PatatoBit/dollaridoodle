@@ -22,9 +22,8 @@
 <style lang="scss">
 	.top {
 		position: fixed;
-		top: 0;
-		right: 0;
-		padding: 1rem;
+		top: 1rem;
+		right: 1rem;
 		z-index: 1000;
 	}
 
