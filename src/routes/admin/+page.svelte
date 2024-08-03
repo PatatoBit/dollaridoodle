@@ -83,20 +83,22 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	.stats {
 		width: 100%;
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		gap: 2rem;
+		margin: 1rem 0;
 	}
 
 	.stat {
-		padding: 1rem 1.5rem;
+		padding: 1rem;
 		border-radius: 0.2rem;
-		width: 3rem;
+		width: 6rem;
 
 		display: flex;
 		flex-direction: column;

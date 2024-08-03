@@ -231,13 +231,14 @@
 		.price-label {
 			position: absolute;
 			rotate: 7deg;
-			bottom: -1rem;
+			bottom: -1.5rem;
 			right: 0;
 
 			border-radius: 2rem;
 
 			padding: 0.5rem 1rem;
 			background-color: var(--secondary);
+			border: 2px solid var(--background);
 			color: var(--background);
 		}
 	}
