@@ -32,6 +32,7 @@ export const actions: Actions = {
 
 			const checkoutItems = [
 				{
+					// Product ID from payloadData.resolution
 					price: ProductId[payloadData.resolution],
 					quantity: 1
 				}
