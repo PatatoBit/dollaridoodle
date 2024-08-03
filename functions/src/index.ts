@@ -5,10 +5,19 @@ import Stripe from 'stripe';
 admin.initializeApp();
 
 export const handleStripeWebhook = onRequest(
-	{ secrets: ['STRIPE_SECRET_KEY', 'STRIPE_PAYMENT_WEBHOOK_SECRET'] },
+	{ secrets: ['STRIPE_SECRET_KEY', 'STRIPE_PAYMENT_WEBHOOK_SECRET', 'TEST_KEY', 'TEST_WEBHOOK'] },
 	async (req, res) => {
-		const stripeKey = process.env.STRIPE_SECRET_KEY;
-		const stripeWebhook = process.env.STRIPE_PAYMENT_WEBHOOK_SECRET;
+		let stripeKey: string | null | undefined;
+		let stripeWebhook: string | null | undefined;
+		const isDev = process.env.NODE_ENV === 'development';
+
+		if (isDev) {
+			stripeKey = process.env.TEST_KEY;
+			stripeWebhook = process.env.TEST_WEBHOOK;
+		} else {
+			stripeKey = process.env.STRIPE_SECRET_KEY;
+			stripeWebhook = process.env.STRIPE_PAYMENT_WEBHOOK_SECRET;
+		}
 
 		if (!stripeKey || !stripeWebhook) {
 			console.error('Stripe secret key or webhook secret not found');
@@ -21,9 +30,7 @@ export const handleStripeWebhook = onRequest(
 		}
 
 		const stripe = new Stripe(stripeKey);
-
 		const sig = req.headers['stripe-signature'] as string;
-
 		let event: Stripe.Event;
 
 		try {
