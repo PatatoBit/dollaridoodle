@@ -29,7 +29,7 @@
 
 <div class="center">
 	<div class="back-button">
-		<a href="/app"><button>Go back</button></a>
+		<a href="/app"><button>go back</button></a>
 	</div>
 
 	{#if success}

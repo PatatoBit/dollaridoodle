@@ -55,7 +55,7 @@
 
 <div class="center">
 	<div class="back-button">
-		<a href="/admin"><button>Go back</button></a>
+		<a href="/admin"><button>go back</button></a>
 	</div>
 
 	<div class="wrapper">
